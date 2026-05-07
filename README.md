@@ -9,8 +9,8 @@ U izradi ovog projekta koristili smo HTML, CSS, JavaScript bez korištenja dodat
 ## Članovi tima
 
 * **Kanita Hrvić** - *GitHub username: KanitaHrvic *
-* **Kenan Ibeljić** - *GitHub username: *
-* **Kenan Ahmić** - *GitHub username: *
+* **Kenan Ibeljić** - *GitHub username: KenanIbeljic *
+* **Kenan Ahmić** - *GitHub username: kenanahmic *
 
 
 
