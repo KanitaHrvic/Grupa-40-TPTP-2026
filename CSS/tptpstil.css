@@ -1,0 +1,158 @@
+/*------------------------------------------NARUDŽBE I KONTAKT---------------------------------------------------*/
+/*---------------------Stavke za korpu---------------------------*/
+.mali-kontejner{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.korpa-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #fff;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color:#fff;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.Ukupna-cijena{
+    display: flex;
+    justify-content: flex-end;
+}
+.Ukupna-cijena table{
+    border-top: 3px solid #fff;
+    width: 100%;
+    max-width: 400px;
+}
+td :last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+/*--------------------------KONTAKT FORMA---------------------------------*/
+.hero{
+    background-color: #000;
+    text-align: center;
+    padding: 40px;
+    border-bottom: 5px solid #000;
+}
+.hero-label{
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 8px;
+}
+.hero h1{
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.hero-opis{
+    color: #000;
+    font-size: 12px;
+}
+.kontakt-sekcija{
+    max-width: 600px;
+    padding: 0 20px;
+    margin: 40px auto;
+}
+#kontakt-forma .polje{
+    margin-bottom: 20px;
+}
+#kontakt-forma label{
+    display: block;
+    font-size: 13px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+#kontakt-forma input,
+#kontakt-forma select,
+#kontakt-forma textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 12px;
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+#kontakt-forma input:focus,
+#kontakt-forma select:focus,
+#kontakt-forma textarea:focus{
+    border-color: #000;
+    outline: none;
+}
+.Greska{
+    display: block;
+    font-size: 12px;
+    color: red;
+    margin-top: 4px;
+    min-height: 16px;
+}
+.polje-Greska input,
+.polje-Greska select,
+.polje-Greska textarea{
+    background-color: #000;
+    border-color: red;
+}
+.dugme{
+    display: flex;
+    margin-top: 10px;
+    gap: 12px;
+}
+.dugme button[type="submit"]{
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 10px 24px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+}
+.dugme button[type="submit"]:hover{
+    background-color: #000;
+}
+.dugme button[type="reset"]{
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    padding: 10px 18px;
+    font-size: 14px;
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+.dugme button[type="reset"]:hover{
+    background-color: #000;
+}
+.uspjesna-poruka{
+    background-color: #000;
+    color: #000;
+    font-size: 14px;
+    padding: 16px 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+/*CSS kod za kontakt formu je dopunjen preporukom Claude AI*/
