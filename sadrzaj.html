@@ -6,8 +6,10 @@
         <title>HomeStyle | Katalog</title>        
         <link rel="stylesheet" href="css/tptpstil.css">
     </head>
-</body class="light mode">
-<header>
+
+<body class="light-mode">
+
+<header id="#top">
     <nav class="container">
         <div class="logo"> HomeStyle<span>.</span></div>
         <ul class="nav-links">
@@ -33,6 +35,7 @@
             <li><a href="#kuhinje">Kuhinja</a></li>
             <li><a href="#kupatila">Kupatilo</a></li>
             <li><a href="#radna-soba">Radna soba</a></li>
+            <li><a href="#tehnicki-podaci">Tehnički podatci</a></li>
         </ul>
     </nav>
     <section id="kategorizacija">
@@ -75,60 +78,499 @@
                     <img src="images/fotelja-relax.jpg" alt="Eko-koža relax fotelja">
                     <figcaption>Eko-koža relax fotelja</figcaption>
                 </figure>
-                <picture>
-                    <source srcset="images/ormar-premium.webp" type="image/webp">
+                <figure>
                     <img src="images/ormar-premium.jpg" alt="Premium trokrilni ormar">
-                </picture>
+                    <figcaption>Premium trokrilni ormar</figcaption>
+                </figure>
             </div>
     </section>
     <section id="dnevna-soba">
         <h3>Dnevna soba</h3>
+        <p class="opis">Dnevna soba je centralno mjesto svakog doma, rezervisana za trenutke opuštanja i druženja. 
+            Naša kolekcija namještaja spaja prirodnu toplinu masivnog drveta sa modernim linijama, 
+            kreirajući prostor koji odiše udobnošću i bezvremenskim stilom.</p>
+        <article class="kartica">
+            <img src="images/dsoba1.jpg" alt="Ugaona garnitura - Moderna" 
+                 onclick="dodajUKorpu('Ugaona garnitura - Moderna', '1800.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Ugaona garnitura - Moderna</figcaption>
+                <p>Cijena: 1800.00 KM</p>
+                <button onclick="dodajUKorpu('Ugaona garnitura - Moderna', '1800.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/dsoba2.jpg" alt="Fotelja - Relax" 
+                 onclick="dodajUKorpu('Fotelja - Relax', '450.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Fotelja - Relax</figcaption>
+                <p>Cijena: 450.00 KM</p>
+                <button onclick="dodajUKorpu('Fotelja - Relax', '450.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/dsoba3.jpg" alt="Klub sto - Minimal" 
+                 onclick="dodajUKorpu('Klub sto - Minimal', '300.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Klub sto - Minimal</figcaption>
+                <p>Cijena: 300.00 KM</p>
+                <button onclick="dodajUKorpu('Klub sto - Minimal', '300.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
-
-
+        <article class="kartica">
+            <img src="images/dsoba4.jpg" alt="Komoda za TV - Vision" 
+                 onclick="dodajUKorpu('Komoda za TV - Vision', '300.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Komoda za TV - Vision</figcaption>
+                <p>Cijena: 300.00 KM</p>
+                <button onclick="dodajUKorpu('Komoda za TV - Vision', '300.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
     </section>
+
     <section id="spavaca-soba">
         <h3>Spavaća soba</h3>
+        <p class="opis">Spavaća soba je vaša lična oaza mira i najintimniji dio doma. 
+            Namještaj za spavaće sobe fokusiran je na prirodne materijale i umirujuće tonove, 
+            pružajući vam savršen ambijent za odmor i regeneraciju uz vrhunski dizajn kreveta i ormara od punog drveta.</p>
+        <article class="kartica">
+            <img src="images/ssoba1.jpg" alt="Bračni krevet - Oaza" 
+                 onclick="dodajUKorpu('Bračni krevet - Oaza', '1600.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Bračni krevet - Oaza</figcaption>
+                <p>Cijena: 1600.00 KM</p>
+                <button onclick="dodajUKorpu('Bračni krevet - Oaza', '1600.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/ssoba2.jpg" alt="Noćni ormarić - Luna" 
+                 onclick="dodajUKorpu('Noćni ormarić - Luna', '120.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Noćni ormarić - Luna</figcaption>
+                <p>Cijena: 120.00 KM</p>
+                <button onclick="dodajUKorpu('Noćni ormarić - Luna', '120.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/ssoba3.jpg" alt="Ormar - Premium 3K" 
+                 onclick="dodajUKorpu('Ormar - Premium 3K', '850.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Ormar - Premium 3K</figcaption>
+                <p>Cijena: 850.00 KM</p>
+                <button onclick="dodajUKorpu('Ormar - Premium 3K', '850.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
-
+        <article class="kartica">
+            <img src="images/ssoba4.jpg" alt="Komoda sa ogledalom" 
+                 onclick="dodajUKorpu('Komoda sa ogledalom', '300.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Komoda sa ogledalom</figcaption>
+                <p>Cijena: 300.00 KM</p>
+                <button onclick="dodajUKorpu('Komoda sa ogledalom', '300.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
     </section>
+
     <section id="trpezarije">
         <h3>Trpezarija</h3>
+        <p class="opis">Trpezarija je mjesto okupljanja i zajedničkih trenutaka koji ostaju u sjećanju. 
+            Trpezarijski stolovi i stolice izrađeni su od najkvalitetnijeg masivnog drveta, 
+            pružajući stabilnost i eleganciju svakom vašem obroku, bilo da se radi o porodičnom ručku ili svečanoj večeri.</p>
+        <article class="kartica">
+            <img src="images/trpezarija1.jpg" alt="Sto - Grand Banquet" 
+                 onclick="dodajUKorpu('Sto - Grand Banquet', '750.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Sto - Grand Banquet</figcaption>
+                <p>Cijena: 750.00 KM</p>
+                <button onclick="dodajUKorpu('Sto - Grand Banquet', '750.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/trpezarija2.jpg" alt="Stolica - Elegance" 
+                 onclick="dodajUKorpu('Stolica - Elegance', '90.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Stolica - Elegance</figcaption>
+                <p>Cijena: 90.00 KM</p>
+                <button onclick="dodajUKorpu('Stolica - Elegance', '90.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/trpezarija3.jpg" alt="Vitrna za posuđe" 
+                 onclick="dodajUKorpu('Vitrna za posuđe', '350.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Vitrna za posuđe</figcaption>
+                <p>Cijena: 350.00 KM</p>
+                <button onclick="dodajUKorpu('Vitrna za posuđe', '350.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
-
+        <article class="kartica">
+            <img src="images/trpezarija4.jpg" alt="Komoda - Sideboard" 
+                 onclick="dodajUKorpu('Komoda - Sideboard', '250.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Komoda - Sideboard</figcaption>
+                <p>Cijena: 250.00 KM</p>
+                <button onclick="dodajUKorpu('Komoda - Sideboard', '250.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
     </section>
+
     <section id="kuhinje">
         <h3>Kuhinja</h3>
+        <p class="opis">Kuhinja je srce doma i prostor gdje funkcionalnost susreće kreativnost. 
+            Naši kuhinjski elementi i radni stolovi dizajnirani su da izdrže svakodnevne izazove, 
+            koristeći drvo tretirano posebnim vodootpornim uljima koja osiguravaju dugovječnost uz moderan i topao izgled.</p>
+        <article class="kartica">
+            <img src="images/kuhinja1.jpg" alt="Kuhinjski element LUX (Donji)" 
+                 onclick="dodajUKorpu('Kuhinjski element LUX (Donji)', '120.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Kuhinjski element LUX (Donji)</figcaption>
+                <p>Cijena: 120.00 KM</p>
+                <button onclick="dodajUKorpu('Kuhinjski element LUX (Donji)', '120.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+         <article class="kartica">
+            <img src="images/kuhinja2.jpg" alt="Viseći ormarić (Gornji)" 
+                 onclick="dodajUKorpu('Viseći ormarić (Gornji)', '120.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Viseći ormarić (Gornji)</figcaption>
+                <p>Cijena: 120.00 KM</p>
+                <button onclick="dodajUKorpu('Viseći ormarić (Gornji)', '120.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/kuhinja3.jpg" alt="Radna ploča - Chef" 
+                 onclick="dodajUKorpu('Radna ploča - Chef', '650.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Radna ploča - Chef</figcaption>
+                <p>Cijena: 650.00 KM</p>
+                <button onclick="dodajUKorpu('Radna ploča - Chef', '650.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
-
+        <article class="kartica">
+            <img src="images/kuhinja4.jpg" alt="Kuhinjsko ostrvo" 
+                 onclick="dodajUKorpu('Kuhinjsko ostrvo', '1150.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Kuhinjsko ostrvo</figcaption>
+                <p>Cijena: 1150.00 KM</p>
+                <button onclick="dodajUKorpu('Kuhinjsko ostrvo', '1150.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
     </section>
+
     <section id="kupatila">
         <h3>Kupatilo</h3>
+        <p class="opis">Kupatilo je mjesto za osvježenje i njegu, gdje je otpornost materijala na prvom mjestu. 
+            Namještaj za kupatila koristi specijalne vrste drveta, poput tikovine i tretiranog jasena, 
+            koji uz vodootporne premaze zadržavaju svoju prirodnu ljepotu i funkcionalnost čak i u uslovima visoke vlažnosti.</p>
+        <article class="kartica">
+            <img src="images/kupatilo1" alt="Ormarić ispod umivaonika" 
+                 onclick="dodajUKorpu('Ormarić ispod umivaonika', '200.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Ormarić ispod umivaonika</figcaption>
+                <p>Cijena: 200.00 KM</p>
+                <button onclick="dodajUKorpu('Ormarić ispod umivaonika', '200.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/kupatilo2" alt="Vertikala za peškire" 
+                 onclick="dodajUKorpu('Vertikala za peškire', '100.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Vertikala za peškire</figcaption>
+                <p>Cijena: 100.00 KM</p>
+                <button onclick="dodajUKorpu('Vertikala za peškire', '100.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/kupatilo3" alt="Ogledalo sa policom" 
+                 onclick="dodajUKorpu('Ogledalo sa policom', '220.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Ogledalo sa policom</figcaption>
+                <p>Cijena: 220.00 KM</p>
+                <button onclick="dodajUKorpu('Ogledalo sa policom', '220.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
-
+        <article class="kartica">
+            <img src="images/kupatilo1" alt="Mala zidna polica" 
+                 onclick="dodajUKorpu('Mala zidna polica', '49.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Mala zidna polica</figcaption>
+                <p>Cijena: 49.00 KM</p>
+                <button onclick="dodajUKorpu('Mala zidna polica', '49.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
     </section>
+
     <section id="radna-soba">
         <h3>Radna soba</h3>
+        <p class="opis">Radna soba je prostor u kojem se rađaju ideje i postiže produktivnost. 
+            Naš kancelarijski namještaj fokusiran je na ergonomiju i organizaciju, 
+            nudeći radne stolove i police koji kombinuju prirodnu estetiku drveta sa funkcionalnošću potrebnom za moderan radni dan.</p>
+            <article class="kartica">
+            <img src="images/rsoba1" alt="Radni sto - Productive" 
+                 onclick="dodajUKorpu('Radni sto - Productive', '200.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Radni sto - Productive</figcaption>
+                <p>Cijena: 200.00 KM</p>
+                <button onclick="dodajUKorpu('Radni sto - Productive', '200.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
+        
+            <article class="kartica">
+            <img src="images/rsoba2" alt="Kancelarijska stolica" 
+                 onclick="dodajUKorpu('Kancelarijska stolica', '180.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Kancelarijska stolica</figcaption>
+                <p>Cijena: 180.00 KM</p>
+                <button onclick="dodajUKorpu('Kancelarijska stolica', '180.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
+        <article class="kartica">
+            <img src="images/rsoba3" alt="Polica za knjige - Library" 
+                 onclick="dodajUKorpu('Polica za knjige - Library', '200.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Polica za knjige - Library</figcaption>
+                <p>Cijena: 200.00 KM</p>
+                <button onclick="dodajUKorpu('Polica za knjige - Library', '200.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
 
-
-
+        <article class="kartica">
+            <img src="images/rsoba4" alt="Ladičar podstolni" 
+                 onclick="dodajUKorpu('Ladičar podstolni', '120.00 KM')" 
+                 style="cursor: pointer;">
+            <div class="info">
+                <figcaption>Ladičar podstolni</figcaption>
+                <p>Cijena: 120.00 KM</p>
+                <button onclick="dodajUKorpu('Ladičar podstolni', '120.00 KM')">Dodaj u korpu</button>
+            </div>
+        </article>
     </section>
+
+<section id="tehnicki-podaci" class="container">
+    <header>
+        <h3>Detaljne specifikacije i cjenovnik</h3>
+        <p>Pregled svih dostupnih modela sa preciznim dimenzijama i vrstama materijala.</p>
+    </header>
+
+    <table class="tptp-tabela">
+        <caption>Tehnički podaci asortimana HomeStyle 2026</caption>
+        <thead>
+            <tr>
+                <th>Prostorija</th>
+                <th>Model artikla</th>
+                <th>Dimenzije (cm)</th>
+                <th>Vrsta drveta</th>
+                <th>Cijena (KM)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4"><strong>Dnevna soba</strong></td>
+                <td>Ugaona garnitura "Moderna"</td>
+                <td>280 x 180 x 85</td>
+                <td>Bukva / Štof</td>
+                <td>1800.00 KM</td>
+            </tr>
+            <tr>
+                <td>Fotelja "Relax"</td>
+                <td>85 x 90 x 100</td>
+                <td>Hrast / Koža</td>
+                <td>450.00 KM</td>
+            </tr>
+            <tr>
+                <td>Klub sto "Minimal"</td>
+                <td>110 x 60 x 40</td>
+                <td>Masivni Orah</td>
+                <td>300.00 KM</td>
+            </tr>
+            <tr>
+                <td>Komoda za TV "Vision"</td>
+                <td>180 x 45 x 55</td>
+                <td>Hrast</td>
+                <td>300.00 KM</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><strong>Spavaća soba</strong></td>
+                <td>Bračni krevet "Oaza"</td>
+                <td>160 x 200 x 110</td>
+                <td>Orah</td>
+                <td>1600.00 KM</td>
+            </tr>
+            <tr>
+                <td>Noćni ormarić "Luna"</td>
+                <td>45 x 40 x 50</td>
+                <td>Orah</td>
+                <td>120.00 KM</td>
+            </tr>
+            <tr>
+                <td>Ormar "Premium" 3K</td>
+                <td>250 x 65 x 220</td>
+                <td>Bijeli Jasen</td>
+                <td>850.00 KM</td>
+            </tr>
+            <tr>
+                <td>Komoda sa ogledalom</td>
+                <td>120 x 50 x 80</td>
+                <td>Jasen</td>
+                <td>300.00 KM</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><strong>Trpezarija</strong></td>
+                <td>Sto "Grand Banquet"</td>
+                <td>200 x 100 x 75</td>
+                <td>Divlji Hrast</td>
+                <td>750.00 KM</td>
+            </tr>
+            <tr>
+                <td>Stolica "Elegance"</td>
+                <td>45 x 50 x 95</td>
+                <td>Bukva</td>
+                <td>90.00 KM</td>
+            </tr>
+            <tr>
+                <td>Vitrna za posuđe</td>
+                <td>100 x 40 x 190</td>
+                <td>Hrast / Staklo</td>
+                <td>350.00 KM</td>
+            </tr>
+            <tr>
+                <td>Komoda "Sideboard"</td>
+                <td>160 x 45 x 85</td>
+                <td>Bukva</td>
+                <td>250.00 KM</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><strong>Kuhinja</strong></td>
+                <td>Kuhinjski element LUX (Donji)</td>
+                <td>60 x 60 x 85</td>
+                <td>Jasen (tretiran)</td>
+                <td>120.00 KM</td>
+            </tr>
+            <tr>
+                <td>Viseći ormarić (Gornji)</td>
+                <td>60 x 30 x 70</td>
+                <td>Jelovina</td>
+                <td>120.00 KM</td>
+            </tr>
+            <tr>
+                <td>Radna ploča "Chef"</td>
+                <td>240 x 60 x 4</td>
+                <td>Masivni Hrast</td>
+                <td>650.00 KM</td>
+            </tr>
+            <tr>
+                <td>Kuhinjsko ostrvo</td>
+                <td>150 x 90 x 90</td>
+                <td>Hrast / Mermer</td>
+                <td>1150.00 KM</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><strong>Kupatilo</strong></td>
+                <td>Ormarić ispod umivaonika</td>
+                <td>80 x 45 x 50</td>
+                <td>Tikovina</td>
+                <td>200.00 KM</td>
+            </tr>
+            <tr>
+                <td>Vertikala za peškire</td>
+                <td>40 x 35 x 180</td>
+                <td>Tikovina</td>
+                <td>100.00 KM</td>
+            </tr>
+            <tr>
+                <td>Ogledalo sa policom</td>
+                <td>80 x 15 x 70</td>
+                <td>Tretirani Jasen</td>
+                <td>220.00 KM</td>
+            </tr>
+            <tr>
+                <td>Mala zidna polica</td>
+                <td>30 x 20 x 60</td>
+                <td>Jasen</td>
+                <td>50.00 KM</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><strong>Radna soba</strong></td>
+                <td>Radni sto "Productive"</td>
+                <td>140 x 70 x 75</td>
+                <td>Hrast / Metal</td>
+                <td>200.00 KM</td>
+            </tr>
+            <tr>
+                <td>Kancelarijska stolica</td>
+                <td>65 x 65 x 110</td>
+                <td>Bukva / Mreža</td>
+                <td>180.00 KM</td>
+            </tr>
+            <tr>
+                <td>Polica za knjige "Library"</td>
+                <td>80 x 30 x 180</td>
+                <td>Bukva</td>
+                <td>200.00 KM</td>
+            </tr>
+            <tr>
+                <td>Ladičar podstolni</td>
+                <td>45 x 55 x 65</td>
+                <td>Hrast</td>
+                <td>120.00 KM</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
     
 
-
-
-
-
+    <a href="#top" class="vrh-link">Skoči na vrh ↑</a>
 </main>
+
+    <footer>
+    <p>&copy; 2026 HomeStyle Namještaj. Sva prava zadržana.</p>
+</footer>
+
+<script src="js/tptpskripte.js"></script>
+
+</body>
 </html>
