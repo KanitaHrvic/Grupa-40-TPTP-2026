@@ -14,8 +14,8 @@ table{
 th{
     text-align: left;
     padding: 5px;
-    color: #fff;
-    background: #fff;
+    color: #2C1A0E;
+    background: #F0E8DA;
     font-weight: normal;
 }
 td{
@@ -27,7 +27,7 @@ td input{
     padding: 5px;
 }
 td a{
-    color:#fff;
+    color:#C8732A;
     font-size: 12px;
 }
 td img{
@@ -40,7 +40,7 @@ td img{
     justify-content: flex-end;
 }
 .Ukupna-cijena table{
-    border-top: 3px solid #fff;
+    border-top: 3px solid #D4C4B0;
     width: 100%;
     max-width: 400px;
 }
@@ -52,25 +52,25 @@ th:last-child{
 }
 /*--------------------------KONTAKT FORMA---------------------------------*/
 .hero{
-    background-color: #000;
+    background-color: #F0E8DA;
     text-align: center;
     padding: 40px;
-    border-bottom: 5px solid #000;
+    border-bottom: 5px solid #D4C4B0;
 }
 .hero-label{
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #000;
+    color: #9E8A72;
     margin-bottom: 8px;
 }
 .hero h1{
     font-size: 36px;
-    color: #000;
+    color: #2C1A0E;
     margin-bottom: 10px;
 }
 .hero-opis{
-    color: #000;
+    color: #7A6652;
     font-size: 12px;
 }
 .kontakt-sekcija{
@@ -84,7 +84,7 @@ th:last-child{
 #kontakt-forma label{
     display: block;
     font-size: 13px;
-    color: #000;
+    color: #2C1A0E;
     font-weight: 500;
     margin-bottom: 6px;
 }
@@ -95,13 +95,13 @@ th:last-child{
     box-sizing: border-box;
     padding: 10px 20px;
     font-size: 12px;
-    border: 1px solid #000;
+    border: 1px solid #D4C4B0;
     border-radius: 6px;
 }
 #kontakt-forma input:focus,
 #kontakt-forma select:focus,
 #kontakt-forma textarea:focus{
-    border-color: #000;
+    border-color: #C8732A;
     outline: none;
 }
 .Greska{
@@ -114,7 +114,7 @@ th:last-child{
 .polje-Greska input,
 .polje-Greska select,
 .polje-Greska textarea{
-    background-color: #000;
+    background-color: #FFF5F5;
     border-color: red;
 }
 .dugme{
@@ -123,7 +123,7 @@ th:last-child{
     gap: 12px;
 }
 .dugme button[type="submit"]{
-    background-color: #000;
+    background-color: #C8732A;
     color: white;
     cursor: pointer;
     padding: 10px 24px;
@@ -132,26 +132,27 @@ th:last-child{
     border-radius: 6px;
 }
 .dugme button[type="submit"]:hover{
-    background-color: #000;
+    background-color: #A85E1F;
 }
 .dugme button[type="reset"]{
     background-color: transparent;
-    color: #000;
+    color: #2C1A0E;
     cursor: pointer;
     padding: 10px 18px;
     font-size: 14px;
-    border: 1px solid #000;
+    border: 1px solid #D4C4B0;
     border-radius: 6px;
 }
 .dugme button[type="reset"]:hover{
-    background-color: #000;
+    background-color: #F0E8DA;
+    color: #2C1A0E;
 }
 .uspjesna-poruka{
-    background-color: #000;
-    color: #000;
+    background-color: #EAF3DE;
+    color: #3B6D11;
     font-size: 14px;
     padding: 16px 20px;
-    border: 1px solid #000;
+    border: 1px solid #639922;
     border-radius: 8px;
     margin-top: 20px;
 }

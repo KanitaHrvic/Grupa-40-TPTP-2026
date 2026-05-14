@@ -8,7 +8,25 @@
 
 
     </head>
-    <body>
+    <body class="light mode">
+<header>
+    <nav class="container">
+        <div class="logo"> HomeStyle<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Početna</a></li>
+            <li><a href="sadrzaj.html">Katalog</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="#dostava">Dostava</a></li>
+            <li><a href="#o-nama">O nama</a></li>
+            </ul>
+            <div class="nav-actions">
+            
+                 <a href="https://github.com/KanitaHrvic/Grupa-40-TPTP-2026/" target ="_blank" class ="github-link"></a>
+            
+            <button id="theme-toggle">🌙</button>
+            </div>
+            </nav>
+            </header>
         <!------------------------------------Stavke za korpu------------------------------------------------->
         <div class="mali-kontejner">
             <table>
@@ -48,27 +66,27 @@
     <h1>Kontakt</h1>
     <p class="hero-opis">Imate pitanja? Popunite formu i odgovoriti ćemo vam u što kraćem roku!</p>
 </section>
-<section class="Kontakt-sekcija">
-    <form id="Kontakt-forma" novalidate>
+<section class="kontakt-sekcija">
+    <form id="kontakt-forma" novalidate>
         <div class="polje">
             <label for="Ime">Ime</label>
             <input type="text" id="Ime" name="Ime">
-            <span class="Greška" id="Ime-Greška"></span>
+            <span class="greska" id="Ime-greska"></span>
         </div>
         <div class="polje">
             <label for="Prezime">Prezime</label>
             <input type="text" id="Prezime" name="Prezime">
-            <span class="Greška" id="Prezime-Greška"></span>
+            <span class="greska" id="Prezime-greska"></span>
         </div>
         <div class="polje">
             <label for="email">Email</label>
             <input type="text" id="email" name="email">
-            <span class="Greška" id="email-Greška"></span>
+            <span class="greska" id="email-greska"></span>
         </div>
         <div class="polje">
             <label for="telefon">Telefon</label>
             <input type="text" id="telefon" name="telefon">
-            <span class="Greška" id="telefon-Greška"></span>
+            <span class="greska" id="telefon-greska"></span>
         </div>
         <div class="polje">
             <label for="tema">Tema upita</label>
@@ -79,12 +97,12 @@
                 <option value="narudzbe">Narudžbe</option>
                 <option value="dostava">Dostava</option>
             </select>
-            <span class="Greška" id="tema-Greška"></span>
+            <span class="greska" id="tema-greska"></span>
         </div>
         <div class="polje">
             <label for="poruka">Poruka</label>
             <textarea id="poruka" name="poruka" rows="5"></textarea>
-            <span class="Greška" id="poruka-Greška"></span>
+            <span class="greska" id="poruka-Greska"></span>
         </div>
         <div class="dugme">
             <button type="submit">Pošalji</button>
@@ -96,6 +114,9 @@
     <div class="uspjesna-poruka" id="uspjesna-poruka" style="display: none;"></div>
 </section>
 
+<footer>
+    <p>&copy; 2026 HomeStyle Namještaj. Sva prava zadržana.</p>
+</footer>
 
 <script src="tptpskripte.js"></script>
     </body>
