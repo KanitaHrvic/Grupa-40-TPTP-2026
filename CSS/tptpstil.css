@@ -467,7 +467,7 @@ footer {
     position: fixed;         /* Ovo omogućava da te dugme prati */
     bottom: 20px;           /* Udaljenost od dna ekrana */
     right: 20px;            /* Udaljenost od desne ivice */
-    background-color: #5d4037; /* Tvoja osnovna smeđa boja */
+    background-color: #5d4037; /* osnovna smeđa boja */
     color: white !important; /* Boja teksta/strelice */
     padding: 10px 15px;
     border-radius: 50px;    /* Zaobljeni rubovi (pilula izgled) */
