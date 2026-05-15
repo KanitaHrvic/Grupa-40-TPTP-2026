@@ -74,3 +74,18 @@ function ukloniGresku (polje, span){
     polje.parentElement.classList.remove('polje-greska');
 }
 //------------------------------------------^^^ SKRIPTA ZA KONTAKT FORMU ^^^---------------------------------------------
+//------------------  vvv SKRIPTA ZA KORPU vvv  -------------------------------------
+function dodajUKorpu (naziv, cijena){
+let korpa = localStorage.getItem('korpa');
+if (korpa === null){
+    korpa = [];
+}else {
+    korpa = JSON.parse(korpa);
+}
+korpa.push({
+    naziv: naziv,
+    cijena: cijena
+});
+localStorage.setItem('korpa', JSON.stringify(korpa));
+alert('Proizvod je dodan u korpu!');
+}

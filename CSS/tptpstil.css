@@ -104,16 +104,16 @@ th:last-child{
     border-color: #C8732A;
     outline: none;
 }
-.Greska{
+.greska{
     display: block;
     font-size: 12px;
     color: red;
     margin-top: 4px;
     min-height: 16px;
 }
-.polje-Greska input,
-.polje-Greska select,
-.polje-Greska textarea{
+.polje-greska input,
+.polje-greska select,
+.polje-greska textarea{
     background-color: #FFF5F5;
     border-color: red;
 }
@@ -468,7 +468,7 @@ footer {
     position: fixed;         /* Ovo omogućava da te dugme prati */
     bottom: 20px;           /* Udaljenost od dna ekrana */
     right: 20px;            /* Udaljenost od desne ivice */
-    background-color: #5d4037; /* Tvoja osnovna smeđa boja */
+    background-color: #5d4037; /* osnovna smeđa boja */
     color: white !important; /* Boja teksta/strelice */
     padding: 10px 15px;
     border-radius: 50px;    /* Zaobljeni rubovi (pilula izgled) */
