@@ -104,16 +104,16 @@ th:last-child{
     border-color: #C8732A;
     outline: none;
 }
-.Greska{
+.greska{
     display: block;
     font-size: 12px;
     color: red;
     margin-top: 4px;
     min-height: 16px;
 }
-.polje-Greska input,
-.polje-Greska select,
-.polje-Greska textarea{
+.polje-greska input,
+.polje-greska select,
+.polje-greska textarea{
     background-color: #FFF5F5;
     border-color: red;
 }
