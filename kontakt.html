@@ -3,10 +3,121 @@
     <head>
         <meta charset="utf-8">
         <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
-        <title>HomeStyle | Kontakt</title>
+        <title>HomeStyle | Narudzbe i Kontakt</title>
         <link rel="stylesheet" href="css/tptpstil.css">
 
 
     </head>
-    
+    <body class="light mode">
+<header>
+    <nav class="container">
+        <div class="logo"> HomeStyle<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Početna</a></li>
+            <li><a href="sadrzaj.html">Katalog</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="#dostava">Dostava</a></li>
+            <li><a href="#o-nama">O nama</a></li>
+            </ul>
+            <div class="nav-actions">
+            
+                 <a href="https://github.com/KanitaHrvic/Grupa-40-TPTP-2026/" target ="_blank" class ="github-link"></a>
+            
+            <button id="theme-toggle">🌙</button>
+            </div>
+            </nav>
+            </header>
+        <!------------------------------------Stavke za korpu------------------------------------------------->
+        <div class="mali-kontejner">
+            <table>
+                <tr>
+                    <th>
+                        <div class="korpa-info">
+                            <img src="images/nesto" alt="slika-produkta">
+                        </div>
+                        <div>
+                            <p>ImeProdukta</p>
+                            <small>Cijena: nekaCijena</small>
+                            <br>
+                            <a href="">Ukloni</a>
+                        </div>
+                    </th>
+                    <th>Kolicina</th>
+                    <th>Cijena</th>
+                </tr>
+                <tr>
+                    <td>Ime produkta</td>
+                    <td><input type = "number" value="1"></td>
+                    <td>200.00KM</td>
+                </tr>
+            </table>
+
+            <div class="Ukupna-cijena">
+            <table>
+                <tr>
+                    <td>Ukupno za platiti</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+<!----------------------------------------------Kontakt forma----------------------------------------------------------------->
+<section class="hero">
+    <p class="hero-label">Web shop namještaja</p>
+    <h1>Kontakt</h1>
+    <p class="hero-opis">Imate pitanja? Popunite formu i odgovoriti ćemo vam u što kraćem roku!</p>
+</section>
+<section class="kontakt-sekcija">
+    <form id="kontakt-forma" novalidate>
+        <div class="polje">
+            <label for="Ime">Ime</label>
+            <input type="text" id="Ime" name="Ime">
+            <span class="greska" id="Ime-greska"></span>
+        </div>
+        <div class="polje">
+            <label for="Prezime">Prezime</label>
+            <input type="text" id="Prezime" name="Prezime">
+            <span class="greska" id="Prezime-greska"></span>
+        </div>
+        <div class="polje">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+            <span class="greska" id="email-greska"></span>
+        </div>
+        <div class="polje">
+            <label for="telefon">Telefon</label>
+            <input type="text" id="telefon" name="telefon">
+            <span class="greska" id="telefon-greska"></span>
+        </div>
+        <div class="polje">
+            <label for="tema">Tema upita</label>
+            <select id="tema" name="tema">
+                <option value="">--Izaberite opciju--</option>
+                <option value="informacije">Opće informacije</option>
+                <option value="reklamacija">Reklamacija</option>
+                <option value="narudzbe">Narudžbe</option>
+                <option value="dostava">Dostava</option>
+            </select>
+            <span class="greska" id="tema-greska"></span>
+        </div>
+        <div class="polje">
+            <label for="poruka">Poruka</label>
+            <textarea id="poruka" name="poruka" rows="5"></textarea>
+            <span class="greska" id="poruka-Greska"></span>
+        </div>
+        <div class="dugme">
+            <button type="submit">Pošalji</button>
+            <button type="reset" id="reset-dugme">Poništi</button>
+        </div>
+    </form>
+    <!--klase su napisane prema preporuci Claude ai-a, razumijem da 'label for' povezuje tekst tabele sa odredenim inputom
+    'id' je jedinstveni identifikator za element na stranici, 'name' je ime polje koje se salje na server-->
+    <div class="uspjesna-poruka" id="uspjesna-poruka" style="display: none;"></div>
+</section>
+
+<footer>
+    <p>&copy; 2026 HomeStyle Namještaj. Sva prava zadržana.</p>
+</footer>
+
+<script src="tptpskripte.js"></script>
+    </body>
 </html>
