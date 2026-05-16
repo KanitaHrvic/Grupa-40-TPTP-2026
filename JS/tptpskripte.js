@@ -125,3 +125,63 @@ function ukloniIzKorpe (index){
     localStorage.setItem('korpa', JSON.stringify(korpa));
     prikaziKorpu();
 }
+
+
+/*======================STRANICA INDEX==================*/
+const kartice = document.querySelectorAll(".product-card");
+if (kartice.length > 0) {
+    kartice.forEach(trenutnaKartica => {
+        const dugmePogledaj = trenutnaKartica.querySelector(".btn");
+        if (dugmePogledaj) {
+            dugmePogledaj.addEventListener("click", (e) => {
+                e.preventDefault();
+                const izabranaKategorija = trenutnaKartica.getAttribute("data-category");
+                const vecFiltrirano = trenutnaKartica.classList.contains("filtrirani-aktivno");
+                kartice.forEach(k => {
+                    if
+                    (vecFiltrirano) {
+                        k.style.display = "block";
+                        k.classList.remove("filtrirano-aktivno");
+                        
+                
+                        
+                    } else 
+                    { 
+                        if (k.getAttribute("data-category") === izabranaKategorija) {
+                            k.style.display = "block";
+                            k.classList.add("filtrirano-aktivno");
+
+                        } else
+                        {
+                            k.style.display = "none";
+                            
+                        }
+                    }
+                })
+            })
+        }
+    })
+}
+if (localStorage.getItem("tamna-tema") === "aktivno") {
+    document.body.style.backgroundColor = "#2d3748";
+    document.body.style.color = "#ffffff";
+
+
+}
+const dugmeMjesec = document.getElementById("theme-toggle");
+if (dugmeMjesec) {
+    dugmeMjesec.addEventListener("click", () => 
+    { 
+        if
+        (localStorage.getItem("tamna-tema") === "aktivno") {
+            document.body.style.backgroundColor = "#ffffff";
+            document.body.style.color = "#000000";
+            localStorage.setItem("tamna.tema", "ugaseno");
+
+        } else {
+            document.body.style.backgroundColor = "#2d3748";
+            document.body.style.color = "#ffffff";
+            localStorage.setItem("tamna-tema", "aktivno");
+        }
+    })
+}
