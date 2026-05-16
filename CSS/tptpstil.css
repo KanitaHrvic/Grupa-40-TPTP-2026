@@ -583,8 +583,13 @@ h2 {
     translateY(0);}
 
 }
-.product-card h3 {
-    animation: pojavljivanje 2s ease-out forwards;
+h1, .hero-content
+h1, .title, .product-card h3 {
+    animation: pojavljivanje 1.5s
+    ease-out forwards;
+}
+h1, .hero-content h1, .title {
+    animation-delay: 0.3s;
 }
 h2::after {
     content: "";
