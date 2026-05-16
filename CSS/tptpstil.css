@@ -160,15 +160,16 @@ th:last-child{
 }
 /*CSS kod za kontakt formu je dopunjen preporukom Claude AI*/
 
-/* --- OSNOVNA PODEŠAVANJA --- */
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; /* Glatko skrolovanje do kategorija */
+    scroll-behavior: smooth;
 }
 
 body {
+    
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #fcfcfc;
     color: #333;
@@ -177,7 +178,8 @@ body {
 /*======================================================================================*/
 /* --- HEADER (zaglavlje za sve stranice) --- */
 header#top {
-    background: linear-gradient(135deg, #d2b48c 0%, #fdfdfd 100%); 
+    width: 100%;
+    background: linear-gradient(135deg, #d2b48c 0%, #fdfdfd 100%);
     padding: 1.5rem 0;
     border-bottom: 2px solid #e0d7cc;
     position: sticky;
@@ -191,6 +193,7 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 .logo {
     font-size: 1.8rem;
@@ -202,28 +205,29 @@ header .container {
 }
 /* Navigacijski linkovi*/
 .nav-links {
-    list-style: none; 
+    list-style: none;
     display: flex;    
     gap: 20px;        
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 /* Osnovni stil za linkove */
 .nav-links li a {
     text-decoration: none;
-    color: #4a3728;           
+    color: #4a3728;          
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 5px;
-    transition: all 0.3s ease; 
-    position: relative;       
+    transition: all 0.3s ease;
+    position: relative;      
 }
 .nav-links li a:hover {
-    color: #b08d57;           
-    background-color: #96796baa; 
+    color: #b08d57;          
+    background-color: #96796baa;
 }
 .nav-links li a.active {
-    color: #b08d57;           
+    color: #b08d57;          
     font-weight: 700;          
 }
 .nav-links li a.active::after {
@@ -233,7 +237,7 @@ header .container {
     left: 12px;
     right: 12px;
     height: 3px;
-    background-color: #b08d57; 
+    background-color: #b08d57;
     border-radius: 2px;
 }
 /* GitHub Uputa - Uokvirena */
@@ -245,7 +249,7 @@ header .container {
 .nav-actions a[href*="https://github.com/KanitaHrvic/Grupa-40-TPTP-2026"] {
     text-decoration: none;
     color: #5d4037;
-    border: 2px dashed #5d4037; 
+    border: 2px dashed #5d4037;
     padding: 8px 15px;
     font-weight: bold;
     border-radius: 8px;
@@ -255,45 +259,120 @@ header .container {
     background-color: #5d4037;
     color: #fff;
 }
-
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-links {
+        justify-content: center;
+    }
+    .nav-actions {
+        justify-content: center;
+        width: 100%;
+    }
+}
 /*============================================================================================================*/
 /*SADRZAJ.HTML (dio koda za stranicu sadrzaj.html*/
-section[id]{scroll-margin-top: 110px;}
-section[id]{scroll-behavior: smooth;}
+:root {
+    --primarna-smedja: #5d4037;
+    --svijetlo-smedja: #8d6e63;
+    --bez-pozadina: #fbf9f6;
+    --bijela: #ffffff;
+    --sjenka: rgba(93, 64, 55, 0.1);
+}
+section[id],
+section:target {
+    scroll-margin-top: 110px !important;
+}
+html {
+    scroll-behavior: smooth;
+}
 .glavna {
-    width: 100%;
-    max-width: 100%;         
-    margin: 0;               
-    padding: 20px 40px 20px 0px; 
+    margin: 0;
+    max-width: 100%;
+    width: 100%;            
+    padding: 20px 40px 20px 0px;
     display: flex;
-    gap: 40px;               
+    gap: 40px;              
     align-items: flex-start;
     box-sizing: border-box;
 }
-.sadrzaj-kataloga {
-    flex: 1;                  
-    display: flex;
-    flex-direction: column;   
-    gap: 50px;                
-    min-width: 0;             
-    width: 100%;
+/* --- DIZAJN ZA PREGLED ASORTIMANA (UGNIJEŽĐENA LISTA) --- */
+#kategorizacija {
+    background-color: #fbf9f6;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid #8d6e63;
+    box-shadow: 0 4px 12px rgba(93, 64, 55, 0.03);
+    margin-bottom: 30px;
 }
-
+#kategorizacija h3 {
+    color: #5d4037;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+#kategorizacija > ul {
+    list-style: none;
+    padding-left: 0;
+}
+#kategorizacija > ul > li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: #4a3728;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+#kategorizacija > ul > li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #b08d57;
+    font-weight: bold;
+}
+#kategorizacija ul ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+/* Stavke unutar podliste */
+#kategorizacija ul ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+    color: #6d5440;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+#kategorizacija ul ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #b08d57;
+    font-size: 1.2rem;
+}
 /* Vertikalni meni sa strane */
 #bookmark-nav {
-    flex: 0 0 240px;         
+    flex: 0 0 240px;       
     position: sticky;        
-    top: 100px;               
+    top: 100px;              
     background: #f4f1ee;      
     padding: 15px;
     border-radius: 8px;
-    border: 1px solid #e5e5e5; 
+    border: 1px solid #e5e5e5;
     z-index: 10;
     margin-left: 10px;        
 }
 #bookmark-nav ul {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;  
     list-style: none;
     padding: 0;
     margin: 15px 0 0 0;
@@ -310,7 +389,53 @@ section[id]{scroll-behavior: smooth;}
 }
 .sadrzaj-kataloga section {
     width: 100%;
-    display: block;           
+    display: block;          
+}
+/*IMAGE MAP*/
+.katalog-okvir {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: 50px auto;        
+    position: relative;      
+    transition: transform 0.3s ease;
+}
+.katalog-okvir img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;      
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;              
+}
+.pozadinska-traka {
+  position: absolute;
+  top: -15px;              
+  right: -20px;            
+  width: 100%;
+  max-width: 600px;            
+  height: 100%;            
+  background-color: #d7c4b7;
+  border-radius: 8px;      
+  z-index: 1;            
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+.katalog-instrukcija {
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.katalog-okvir:hover {
+  transform: translateY(-5px);
 }
 /*GALERIJA (Istaknuti artikli)*/
 .galerija {
@@ -343,7 +468,8 @@ section[id] {
 }
 .kartica {
     display: inline-block;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     margin: 15px;
     background: white;
     border-radius: 10px;
@@ -385,6 +511,11 @@ section[id] {
     letter-spacing: 1px;
 }
 /* Dizajn Tabele */
+.tabela-kontejner {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 .tptp-tabela {
     width: 100%;
     border-collapse: collapse;
@@ -434,32 +565,49 @@ section[id] {
 .vrh-link-static {
     display: inline-block;  
     background-color: #d2b48c;
-    color: #4a3728; 
+    color: #4a3728;
     padding: 8px 16px;
     font-size: 0.85rem;  
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.3s ease;
-    border: 2px solid #5d4037; 
+    border: 2px solid #5d4037;
     position: fixed;
-    bottom: 25px;   
+    bottom: 25px;  
     right: 25px;    
     z-index: 9999;  
 }
 .vrh-link-static:hover {
     background-color: #5d4037;
     color: #fff;
-    border-color: #5d4037; 
+    border-color: #5d4037;
+}
+@media (max-width: 768px) {
+    .glavna {
+        flex-direction: column; /* Prebacuje sidebar iznad ili ispod sadržaja */
+        padding: 20px;
+    }
+    #bookmark-nav {
+        flex: none; /* Ukida fiksnu širinu od 240px */
+        width: 100%; /* Zauzima cijelu širinu na mobitelu */
+        position: static; /* Ukida ljepljivost (sticky) jer na mobitelu zauzima previše prostora */
+        margin-left: 0;
+    }
+    #bookmark-nav ul {
+        flex-direction: row; /* Stavlja linkove u red na mobitelu */
+        flex-wrap: wrap; /* Dozvoljava prelazak u novi red */
+        justify-content: center;
+    }
 }
 /* --- FOOTER (za sve stranice) --- */
 footer {
+    width: 100%;
     text-align: center;
     padding: 40px;
     background: #f2ede9;
     border-top: 1px solid var(--svijetlo-smedja);
 }
-
 /*===============STRANICA INDEX===========*/
 :root{
     --plava: #3498db;
@@ -571,7 +719,7 @@ h2 {
         }
     }
 @media (max-width: 600px){
-    grid.container {
+    .grid-container {
         grid-template-columns: 1fr;
         gap:20px;
     }
