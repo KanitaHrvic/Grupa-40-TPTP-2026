@@ -546,8 +546,7 @@ h2.title {
 .container p {
     background-color: #fdfbf7;
     color:#4a4a4a;
-    padding: 35px
-    40px;
+    padding: 35px 40px;
     border-radius: 12px;
     border-left: 5px solid var(--zlatna);
     box-shadow: 0 4px 20px
