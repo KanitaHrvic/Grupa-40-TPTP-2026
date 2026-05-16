@@ -89,3 +89,39 @@ korpa.push({
 localStorage.setItem('korpa', JSON.stringify(korpa));
 alert('Proizvod je dodan u korpu!');
 }
+function prikaziKorpu(){
+let korpa = localStorage.getItem('korpa');
+if (korpa === null){
+    return;
+}
+korpa = JSON.parse(korpa);
+const tabela = document.querySelector('#korpa-tijelo');
+tabela.innerHTML = '';
+korpa.forEach(function(proizvod, index){
+const red = document.createElement('tr');
+red.innerHTML= `
+<td>${proizvod.naziv}</td>
+<td>${proizvod.cijena}</td>
+<td><a href = "#">Ukloni</a></td>
+`;
+const ukloniLink = red.querySelector('a');
+ukloniLink.addEventListener('click', function (e){
+    e.preventDefault();
+    ukloniIzKorpe(index);
+});
+tabela.appendChild(red);
+});
+let ukupno = 0;
+korpa.forEach(function(proizvod){
+    const cijena = parseFloat(proizvod.cijena);
+    ukupno += cijena;
+});
+document.getElementById('ukupno').textContent = ukupno.toFixed(2) + ' KM';
+};
+prikaziKorpu();
+function ukloniIzKorpe (index){
+    let korpa = JSON.parse(localStorage.getItem('korpa'));
+    korpa.splice(index, 1);
+    localStorage.setItem('korpa', JSON.stringify(korpa));
+    prikaziKorpu();
+}
