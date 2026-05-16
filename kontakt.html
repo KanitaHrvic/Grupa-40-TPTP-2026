@@ -27,38 +27,29 @@
     </nav>
 </header>
         <!------------------------------------Stavke za korpu------------------------------------------------->
-        <div class="mali-kontejner">
-            <table>
-                <tr>
-                    <th>
-                        <div class="korpa-info">
-                            <img src="images/nesto" alt="slika-produkta">
-                        </div>
-                        <div>
-                            <p>ImeProdukta</p>
-                            <small>Cijena: nekaCijena</small>
-                            <br>
-                            <a href="">Ukloni</a>
-                        </div>
-                    </th>
-                    <th>Kolicina</th>
-                    <th>Cijena</th>
-                </tr>
-                <tr>
-                    <td>Ime produkta</td>
-                    <td><input type = "number" value="1"></td>
-                    <td>200.00KM</td>
-                </tr>
-            </table>
+       <div class = "mali-kontejner">
+        <table>
+            <thead>
+            <tr>
+                <th>Proizvod</th>
+                <th>Cijena</th>
+                <th>Akcija</th>
+            </tr>
+            </thead>
+            <tbody id = "korpa-tijelo">
 
-            <div class="Ukupna-cijena">
+            </tbody>
+        </table>
+        <div class = "Ukupna-cijena">
             <table>
                 <tr>
-                    <td>Ukupno za platiti</td>
+                    <td>Ukupno za platiti:</td>
+                    <td id = "ukupno">0.00 KM</td>
                 </tr>
             </table>
-            </div>
         </div>
+       </div>
+        
 <!----------------------------------------------Kontakt forma----------------------------------------------------------------->
 <section class="hero">
     <p class="hero-label">Web shop namještaja</p>
