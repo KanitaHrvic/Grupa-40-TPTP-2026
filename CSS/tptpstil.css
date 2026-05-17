@@ -717,6 +717,45 @@ h2 {
     color: #d4a373;
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-card {
+    background: #fdfdfd;
+    padding: 20px;
+    box-shadow: 0 4px 15px
+    var(--sjena);
+    border: 1px solid #eee;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px
+    var(--sjena);
+}
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 10px;
+}
+.product-card h3 {
+    font-size: 1.4rem;
+    color: var(--zlatna);
+    margin: 15px 0 10px 0;
+    letter-spacing: 1px;
+}
+.product-card p {
+    font-size: 0.95rem;
+    color: var(--siva);
+    line-height: 1.6;
+    font-style: italic;
+    padding: 0 10px;
 }
 
 /* --- FIKSIRANO DUGME ZA POVRATAK NA VRH --- */
@@ -742,17 +781,49 @@ h2 {
         grid-template-columns:repeat(2, 1fr);
         }
     }
-@media (max-width: 600px){
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap:20px;
+@media (max-width: 600px) {
+    .main-layout {
+        flex-direction: column;
+        gap: 20px;
     }
 }
+.kategorije-meni-strana {
+    width: 100%;
+
+}
+.filter-btn {
+    width: 100%;
+    text-align: center;
+
+}
+.grid-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+@keyframes pojavljivanje {
+    from { opacity: 0; transform:
+    translateY(-15px);}
+    to { opacity: 1; transform:
+    translateY(0);}
 
 .vrh-link:hover {
     background-color: #8d6e63; /* Svjetlija smeđa na hover */
     transform: scale(1.1);     /* Malo se poveća kad pređeš mišem */
 }
+h1, .hero-content h1, .title, .product-card h3 {
+    animation: pojavljivanje 1.5s ease-out forwards;
+}
+h1, .hero-content h1, .title {
+    animation-delay: 0.3s;
+}
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--zlatna);
+    margin: 10px auto;
 
 /* Theme Toggle Button */
 #theme-toggle {
@@ -809,35 +880,25 @@ h2 {
     font-weight: bold;
 
 }
-section.products {
+.main-layout {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
     gap: 40px;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-section.products h2 {
+    margin: 30px auto;
+    padding: 0 20px;
+    align-items: flex-start;
     width: 100%;
-    margin-bottom: 30px;
-
 }
-section.products {
-    display: flex;
-    flex-wrap: wrap !important;
-    align-items: flex-start !important;
-    gap: 40px !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 40px 20px !important;
+.products {
+    min-width: 240px;
+    flex-shrink: 0;
 }
-section.products h2 {
-width: 100% !important;
-text-align: center !important;
-margin-bottom: 40px !important;
-display: block !important;
-}
+.grid-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 
+    repeat(3, 1fr);
+    gap: 25px;
 .kategorije-meni-strana {
     flex:auto0
     0
