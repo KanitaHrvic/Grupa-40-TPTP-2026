@@ -13,6 +13,10 @@ table{
     display: flex;
     flex-wrap: wrap;
 }
+#korpa-tijelo td{
+    vertical-align: middle;
+    padding: 10px 5px;
+}
 th{
     text-align: left;
     padding: 5px;

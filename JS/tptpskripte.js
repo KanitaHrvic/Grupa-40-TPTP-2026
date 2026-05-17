@@ -78,7 +78,7 @@ function ukloniGresku (polje, span){
 }
 //------------------------------------------^^^ SKRIPTA ZA KONTAKT FORMU ^^^---------------------------------------------
 //------------------  vvv SKRIPTA ZA KORPU vvv  -------------------------------------
-function dodajUKorpu (naziv, cijena){
+function dodajUKorpu (naziv, cijena, slika){
 let korpa = localStorage.getItem('korpa');
 if (korpa === null){
     korpa = [];
@@ -87,7 +87,8 @@ if (korpa === null){
 }
 korpa.push({
     naziv: naziv,
-    cijena: cijena
+    cijena: cijena,
+    slika: slika
 });
 localStorage.setItem('korpa', JSON.stringify(korpa));
 alert('Proizvod je dodan u korpu!');
@@ -103,7 +104,8 @@ tabela.innerHTML = '';
 korpa.forEach(function(proizvod, index){
 const red = document.createElement('tr');
 red.innerHTML= `
-<td>${proizvod.naziv}</td>
+<td><img src = "${proizvod.slika}" alt = "${proizvod.naziv}" style ="width: 60px; height: 60px; object-fit: cover; border-radius: 4px; vertical-align: middle; margin-right: 10px">
+${proizvod.naziv}</td>
 <td>${proizvod.cijena}</td>
 <td><a href = "#">Ukloni</a></td>
 `;
@@ -126,6 +128,7 @@ prikaziKorpu();
 }
 function ukloniIzKorpe (index){
     let korpa = JSON.parse(localStorage.getItem('korpa'));
+    if(korpa === null); return;
     korpa.splice(index, 1);
     localStorage.setItem('korpa', JSON.stringify(korpa));
     prikaziKorpu();
@@ -140,6 +143,8 @@ if(narudzbaDugme){
         }
         alert('Vaša narudžba je poslana. Hvala na kupovini!');
         localStorage.removeItem ('korpa');
+        document.querySelector('#korpa-tijelo').innerHTML = '';
+        document.getElementById('ukupno').textContent = '0.00 KM';
         prikaziKorpu();
     });
 }
