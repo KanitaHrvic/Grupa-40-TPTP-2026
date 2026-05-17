@@ -151,7 +151,6 @@ if(narudzbaDugme){
 
 /*
 /*======================STRANICA INDEX==================*/
-alert("JS radi!");
  
 const dugmeMjesec = document.getElementById("theme-toggle");
         if
