@@ -129,58 +129,44 @@ function ukloniIzKorpe (index){
     prikaziKorpu();
 }
 
-
+/*
 /*======================STRANICA INDEX==================*/
-const kartice = document.querySelectorAll(".product-card");
-if (kartice.length > 0) {
-    kartice.forEach(trenutnaKartica => {
-        const dugmePogledaj = trenutnaKartica.querySelector(".btn");
-        if (dugmePogledaj) {
-            dugmePogledaj.addEventListener("click", (e) => {
-                e.preventDefault();
-                const izabranaKategorija = trenutnaKartica.getAttribute("data-category");
-                const vecFiltrirano = trenutnaKartica.classList.contains("filtrirani-aktivno");
-                kartice.forEach(k => {
-                    if
-                    (vecFiltrirano) {
-                        k.style.display = "block";
-                        k.classList.remove("filtrirano-aktivno");
-                        
-                
-                        
-                    } else 
-                    { 
-                        if (k.getAttribute("data-category") === izabranaKategorija) {
-                            k.style.display = "block";
-                            k.classList.add("filtrirano-aktivno");
 
-                        } else
-                        {
-                            k.style.display = "none";
-                            
-                        }
-                    }
-                })
-            })
-        }
-    })
-}
+ 
+if (localStorage.getItem("tamna-tema") === "aktivno") {
+    document.body.style.backgroundColor = "#2d3748";
+    document.body.style.color = "#ffffff";
+
 
 const dugmeMjesec = document.getElementById("theme-toggle");
         if
         (localStorage.getItem("tamna-tema") === "aktivno") {
             document.body.classList.add('tamna-tema');
 
-        } 
-        
-        if (dugmeMjesec){
-            dugmeMjesec.addEventListener('click', function(){
-                document.body.classList.toggle('tamna-tema');
-
-                if(document.body.classList.contains('tamna-tema')){
-                    localStorage.setItem('tamna-tema', 'aktivno')
-                }else{
-                    localStorage.setItem('tamna-tema', 'ugaseno');
-                }
-            })
+        } else {
+            document.body.style.backgroundColor = "#2d3748";
+            document.body.style.color = "#ffffff";
+            localStorage.setItem("tamna-tema", "aktivno");
         }
+    })
+}
+document.querySelectorAll(".filter-btn").forEach(button => {
+    button.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelectorAll(".filter-btn").forEach(d => d.classList.remove("active"));
+        button.classList.add("active");
+        let izabraniFilter = button.getAttribute("data-filter");
+        const kartice = document.querySelectorAll(".grid-conteiner .product-card");
+        kartice.forEach(card => {
+            let kategorijaKartice = card.getAttribute("data-category");
+            if(izabraniFilter.toLowerCase() === kategorijaKartice.toLowerCase() || izabraniFilter === "sve") {
+
+            
+                card.style.display = "block";
+            }
+            else {
+                card.style.display = "none";
+            }
+        })
+    });
+});
