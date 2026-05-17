@@ -1,6 +1,7 @@
 //---------------------------------vvvv SKRIPTA ZA KONTAKT FORMU vvv --------------------------------------------------------
 const forma = document.getElementById('kontakt-forma');
-forma.addEventListener('submit', function(event){
+if(forma){
+    forma.addEventListener('submit', function (event){
 event.preventDefault();
 let jeIspravno = true;
 const ime = document.getElementById('Ime');
@@ -60,6 +61,7 @@ if(jeIspravno){
     forma.reset(); 
 }
 })
+    
 document.getElementById('reset-dugme').addEventListener('click', function(){
     const uspjesna = document.getElementById('uspjesna-poruka');
     uspjesna.textContent = '';
@@ -73,9 +75,10 @@ function ukloniGresku (polje, span){
     span.textContent = '';
     polje.parentElement.classList.remove('polje-greska');
 }
+}
 //------------------------------------------^^^ SKRIPTA ZA KONTAKT FORMU ^^^---------------------------------------------
 //------------------  vvv SKRIPTA ZA KORPU vvv  -------------------------------------
-function dodajUKorpu (naziv, cijena){
+function dodajUKorpu (naziv, cijena, slika){
 let korpa = localStorage.getItem('korpa');
 if (korpa === null){
     korpa = [];
@@ -84,7 +87,8 @@ if (korpa === null){
 }
 korpa.push({
     naziv: naziv,
-    cijena: cijena
+    cijena: cijena,
+    slika: slika
 });
 localStorage.setItem('korpa', JSON.stringify(korpa));
 alert('Proizvod je dodan u korpu!');
@@ -100,7 +104,8 @@ tabela.innerHTML = '';
 korpa.forEach(function(proizvod, index){
 const red = document.createElement('tr');
 red.innerHTML= `
-<td>${proizvod.naziv}</td>
+<td><img src = "${proizvod.slika}" alt = "${proizvod.naziv}" style ="width: 60px; height: 60px; object-fit: cover; border-radius: 4px; vertical-align: middle; margin-right: 10px">
+${proizvod.naziv}</td>
 <td>${proizvod.cijena}</td>
 <td><a href = "#">Ukloni</a></td>
 `;
@@ -118,41 +123,57 @@ korpa.forEach(function(proizvod){
 });
 document.getElementById('ukupno').textContent = ukupno.toFixed(2) + ' KM';
 };
+if(document.getElementById('korpa-tijelo')){
 prikaziKorpu();
+}
 function ukloniIzKorpe (index){
     let korpa = JSON.parse(localStorage.getItem('korpa'));
+    if(korpa === null); return;
     korpa.splice(index, 1);
     localStorage.setItem('korpa', JSON.stringify(korpa));
     prikaziKorpu();
 }
+const narudzbaDugme = document.getElementById('posalji-narudzbu');
+if(narudzbaDugme){
+    narudzbaDugme.addEventListener('click', function(){
+        const korpa = localStorage.getItem('korpa');
+        if(korpa === null || JSON.parse(korpa).length === 0){
+            alert('Korpa je prazna!');
+            return;
+        }
+        alert('Vaša narudžba je poslana. Hvala na kupovini!');
+        localStorage.removeItem ('korpa');
+        document.querySelector('#korpa-tijelo').innerHTML = '';
+        document.getElementById('ukupno').textContent = '0.00 KM';
+        prikaziKorpu();
+    });
+}
 
 /*
 /*======================STRANICA INDEX==================*/
-
+alert("JS radi!");
  
-if (localStorage.getItem("tamna-tema") === "aktivno") {
-    document.body.style.backgroundColor = "#2d3748";
-    document.body.style.color = "#ffffff";
-
-
-}
 const dugmeMjesec = document.getElementById("theme-toggle");
-if (dugmeMjesec) {
-    dugmeMjesec.addEventListener("click", () => 
-    { 
         if
         (localStorage.getItem("tamna-tema") === "aktivno") {
-            document.body.style.backgroundColor = "#ffffff";
-            document.body.style.color = "#000000";
-            localStorage.setItem("tamna.tema", "ugaseno");
+            document.body.classList.add('tamna-tema');
 
-        } else {
-            document.body.style.backgroundColor = "#2d3748";
-            document.body.style.color = "#ffffff";
-            localStorage.setItem("tamna-tema", "aktivno");
+        } 
+        
+        if (dugmeMjesec){
+            dugmeMjesec.addEventListener('click', function(){
+                document.body.classList.toggle('tamna-tema');
+
+                if(document.body.classList.contains('tamna-tema')){
+                    localStorage.setItem('tamna-tema', 'aktivno')
+                }else{
+                    localStorage.setItem('tamna-tema', 'ugaseno');
+                }
+            })
         }
-    })
-}
+    
+    
+    
 document.querySelectorAll(".filter-btn").forEach(button => {
     button.addEventListener("click", function(e) {
         e.preventDefault();
