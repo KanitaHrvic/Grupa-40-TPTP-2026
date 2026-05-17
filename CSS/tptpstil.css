@@ -44,13 +44,33 @@ td img{
 .Ukupna-cijena table{
     border-top: 3px solid #D4C4B0;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
+}
+.Ukupna-cijena td:last-child{
+    text-align: right;
 }
 td :last-child{
     text-align: right;
 }
 th:last-child{
     text-align: right;
+}
+.narudzba-dugme{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+.narudzba-dugme button{
+    background-color: #C8732A;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.narudzba-dugme button:hover{
+    background-color: #A85E1F;
 }
 /*--------------------------KONTAKT FORMA---------------------------------*/
 .hero{
@@ -832,4 +852,9 @@ display: block !important;
     repeat(3, 1fr) !important;
     gap: 25px !important;
     margin: 0 !important;
+}
+/*Tamna tema*/
+body.tamna-tema{
+    background-color: #2d3748 !important;
+    color: #ffffff !important;
 }
