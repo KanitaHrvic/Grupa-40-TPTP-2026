@@ -912,6 +912,7 @@ h2::after {
     repeat(3, 1fr) !important;
     gap: 25px !important;
     margin: 0 !important;
+    /*ovaj dio sam radila par puta, uradila uz pomoc gemini*/
 }
 /*Tamna tema*/
 body.tamna-tema{

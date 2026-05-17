@@ -151,7 +151,7 @@ if(narudzbaDugme){
 
 /*
 /*======================STRANICA INDEX==================*/
-alert("JS radi!");
+
  
 const dugmeMjesec = document.getElementById("theme-toggle");
         if
@@ -180,7 +180,7 @@ document.querySelectorAll(".filter-btn").forEach(button => {
         document.querySelectorAll(".filter-btn").forEach(d => d.classList.remove("active"));
         button.classList.add("active");
         let izabraniFilter = button.getAttribute("data-filter");
-        const kartice = document.querySelectorAll(".grid-conteiner .product-card");
+        const kartice = document.querySelectorAll(".product-card");
         kartice.forEach(card => {
             let kategorijaKartice = card.getAttribute("data-category");
             if(izabraniFilter.toLowerCase() === kategorijaKartice.toLowerCase() || izabraniFilter === "sve") {
@@ -190,6 +190,7 @@ document.querySelectorAll(".filter-btn").forEach(button => {
             }
             else {
                 card.style.display = "none";
+                /*ovaj dio koda sam preuzela od gemini*/
             }
         })
     });
