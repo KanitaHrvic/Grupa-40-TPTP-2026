@@ -761,20 +761,6 @@ h2 {
     font-style: italic;
     padding: 0 10px;
 }
-
-/* --- FIKSIRANO DUGME ZA POVRATAK NA VRH --- */
-.vrh-link {
-    position: fixed;         /* Ovo omogućava da te dugme prati */
-    bottom: 20px;           /* Udaljenost od dna ekrana */
-    right: 20px;            /* Udaljenost od desne ivice */
-    background-color: #5d4037; /* Tvoja osnovna smeđa boja */
-    color: white !important; /* Boja teksta/strelice */
-    padding: 10px 15px;
-    border-radius: 50px;    /* Zaobljeni rubovi (pilula izgled) */
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3 ease;
-}
 .product-card a:hover {
     background-color: var(--plava);
     box-shadow: 0 5px 15px
@@ -811,10 +797,6 @@ h2 {
     to { opacity: 1; transform:
     translateY(0);}
     }
-.vrh-link:hover {
-    background-color: #8d6e63; /* Svjetlija smeđa na hover */
-    transform: scale(1.1);     /* Malo se poveća kad pređeš mišem */
-}
 h1, .hero-content h1, .title, .product-card h3 {
     animation: pojavljivanje 1.5s ease-out forwards;
 }
