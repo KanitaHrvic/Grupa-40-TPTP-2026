@@ -166,7 +166,7 @@ const dugmeMjesec = document.getElementById("theme-toggle");
                 }
             })
         }
-    }
+    
     
     
 document.querySelectorAll(".filter-btn").forEach(button => {
