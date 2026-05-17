@@ -71,7 +71,7 @@ th:last-child{
     padding: 12px 28px;
     border-radius: 6px;
     font-size: 14px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 .narudzba-dugme button:hover{
     background-color: #A85E1F;
@@ -182,7 +182,7 @@ th:last-child{
     border-radius: 8px;
     margin-top: 20px;
 }
-/*CSS kod za kontakt formu je dopunjen preporukom Claude AI*/
+/*CSS kod za kontakt formu i korpu je dopunjen preporukom Claude AI*/
 
 /*======================================================================================================*/
 /*=====> HEADER (isti za sve) <========*/
@@ -903,7 +903,8 @@ h2::after {
 /*Tamna tema*/
 body.tamna-tema{
     background-color: #2d3748 !important;
-    color: #ffffff !important;
+    color: #ffffff !important; /*Claude AI je popravio ovaj dio, dodavajuci !important pravilo.
+    Znam da je to pravilo koje daje prednost pri izvrsavanju naspram drugih linija koda*/
 }
 /*=====================================================================================================================*/
 /* DIO TAMNE TEME ZA SADRZAJ.HTML */

@@ -128,7 +128,7 @@ prikaziKorpu();
 }
 function ukloniIzKorpe (index){
     let korpa = JSON.parse(localStorage.getItem('korpa'));
-    if(korpa === null); return;
+    if(korpa === null) return;
     korpa.splice(index, 1);
     localStorage.setItem('korpa', JSON.stringify(korpa));
     prikaziKorpu();
