@@ -5,181 +5,116 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HomeStyle | Početna</title>
         <link rel="stylesheet" href="css/tptpstil.css">
-        
-
-
     </head>
-    
-    <body class="light-mode">
     <body class="light mode">
     <header id="top">
-    <nav class="container">
-        <div class="logo"> HomeStyle<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Početna</a></li>
-            <li><a href="sadrzaj.html">Katalog</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="#dostava">Dostava</a></li>
-            <li><a href="#o-nama">O nama</a></li>
-        </ul>
-        <div class="nav-actions">
-            <a href="https://github.com/KanitaHrvic/Grupa-40-TPTP-2026">GitHub Projekat</a>
-            <button id="theme-toggle">🌙</button>
-            <!--dio koda za dugme tamni mod preuzet od gemini-->
-        </div>
+        <nav class="container">
+            <div class="logo"> HomeStyle<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Početna</a></li>
+                <li><a href="sadrzaj.html">Katalog</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="#dostava">Dostava</a></li>
+                <li><a href="#o-nama">O nama</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://github.com/KanitaHrvic/Grupa-40-TPTP-2026">GitHub Projekat</a>
+                <button id="theme-toggle">🌙</button>
+                </div>
         </nav>
     </header>
-            <main class="container">
-                <section class="hero">
-                    <div class="hero-content">
-                        <h1>Namještaj koji <br> stvara dom<span>.</span></h1>
-                        <p>Otkrijte kolekciju koja spaja udobnost i dizajn.</p>
-                        <a href="sadrzaj.html" class="btn">Istraži kolekciju</a>
-                        </div>
-                        </section>
-                        <section id="o-nama">
-                        <h2>O nama</h2>
-                        <p>
-                            Dobrodošli u HomeStyle.
-                            Mi kreiramo namještaj koji spaja udobnost i modern dizajn.
-                            Naša misija je pretvoriti vašu kuću u pravi dom kroz kvalitetne i pažljivo birane komade.
-                            </p>
-                        </section> <div class="main-layout">
 
-                        
-                    <section class="products">
-                    
-                            <h2>Naše kategorije</h2>
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Namještaj koji <br> stvara dom<span>.</span></h1>
+                <p>Otkrijte kolekciju koja spaja udobnost i dizajn.</p>
+                <a href="sadrzaj.html" class="btn">Istraži kolekciju</a>
+            </div>
+        </section>
 
-                            <div class="kategorije-meni-strana">
-                            <h3>KATEGORIJE</h3>
-                            <ul>
-                                <li><button
-                                    class="filter-btn"
-                                    data-filter="sve">Sve</button></li>
-                                    <li><button
-                                        class="filter-btn"
-                                        data-filter="dnevna">Dnevna soba</button></li>
-                                        <li><button
-                                            class="filter-btn"
-                                            data-filter="spavaca">Spavaća soba</button></li>
-                                            <li><button
-                                                class="filter-btn"
-                                                data-filter="kuhinja">Kuhinja</button></li>
-                                                <li><button
-                                                    class="filter-btn"
-                                                    data-filter="trpezarija">Trpezarija</button></li>
-                                                    <li><button
-                                                        class="filter-btn"
-                                                        data-filter="kupatilo">Kupatilo</button></li>
-                                                        <li><button
-                                                        class="filter-btn"
-                                                        data-filter="radna">Radna soba</button></li>
-                                                        
+        <section id="o-nama">
+            <h2>O nama</h2>
+            <p>
+                Dobrodošli u HomeStyle.
+                Mi kreiramo namještaj koji spaja udobnost i modern dizajn.
+                Naša misija je pretvoriti vašu kuću u pravi dom kroz kvalitetne i pažljivo birane komade.
+            </p>
+        </section> 
 
+        <section class="kategorije-sekcija">
+            <h2>Naše kategorije</h2>
+            <div class="kategorije-meni-strana">
+                <ul>
+                    <li><button class="filter-btn active" data-filter="sve">Sve</button></li>
+                    <li><button class="filter-btn" data-filter="dnevna">Dnevna soba</button></li>
+                    <li><button class="filter-btn" data-filter="spavaca">Spavaća soba</button></li>
+                    <li><button class="filter-btn" data-filter="kuhinja">Kuhinja</button></li>
+                    <li><button class="filter-btn" data-filter="trpezarija">Trpezarija</button></li>
+                    <li><button class="filter-btn" data-filter="kupatilo">Kupatilo</button></li>
+                    <li><button class="filter-btn" data-filter="radna">Radna soba</button></li>
+                </ul>
+            </div>
+        </section> 
 
+        <section class="products">                     
+            <div class="grid-container">
+                <div class="product-card" data-category="dnevna">
+                    <img src="images/dnevna.jpg" width="200" loading="lazy" alt="Dnevna soba">
+                    <h3>Dnevna soba</h3>
+                    <p>Uživajte u udobnosti i stilu.</p>
+                    <a href="sadrzaj.html#dnevna-soba" class="btn">Pogledaj</a>
+                </div>
+                <div class="product-card" data-category="spavaca">
+                    <img src="images/spavaca.jpg" width="200" loading="lazy" alt="Spavaća soba">
+                    <h3>Spavaća soba</h3>
+                    <p>Pretvorite svoju spavaću sobu u oazu mira i udobnosti.</p>
+                    <a href="sadrzaj.html#spavaca-soba" class="btn">Pogledaj</a>
+                </div>
+                <div class="product-card" data-category="kuhinja">
+                    <img src="images/kuhinja.jpg" width="200" loading="lazy" alt="Kuhinja">
+                    <h3>Kuhinja</h3>
+                    <p>Funkcionalne i moderne kuhinje po mjeri.</p>
+                    <a href="sadrzaj.html#kuhinja" class="btn">Pogledaj</a>
+                </div>
+                <div class="product-card" data-category="trpezarija">
+                    <img src="images/trpezarija.jpg" width="200" loading="lazy" alt="Trpezarija">
+                    <h3>Trpezarija</h3>
+                    <p>Najbolji komfor za porodična okupljanja.</p>
+                    <a href="sadrzaj.html#trpezarija" class="btn">Pogledaj</a>
+                </div>
+                <div class="product-card" data-category="kupatilo">
+                    <img src="images/kupatilo.jpg" width="200" loading="lazy" alt="Kupatilo">
+                    <h3>Kupatilo</h3>
+                    <p>Udobno i funkcionalno za vaše svakodnevne potrebe.</p>
+                    <a href="sadrzaj.html#kupatilo" class="btn">Pogledaj</a>
+                </div>
+                <div class="product-card" data-category="radna">
+                    <img src="images/radna-soba.jpg" width="200" loading="lazy" alt="Radna soba">
+                    <h3>Radna soba</h3>
+                    <p>Modern namještaj za vašu kućnu kancelariju.</p>
+                    <a href="sadrzaj.html#radna-soba" class="btn">Pogledaj</a>
+                </div> 
+            </div>
+        </section>
 
-                                                        </ul>
-                                                       </div> 
-                                                        
-  <div class="grid-container">
-                            <div class="product-card"
-                            data-category="dnevna">
-                                <img src="images/dnevna.jpg"
-                                width="200" loading="lazy"
-                                 alt="Dnevna soba">
-                                <h3>Dnevna soba</h3>
-                                <p>Uživajte u udobnosti i stilu.</p>
-                                <a href="sadrzaj.html#dnevna-soba"
-                                 class="btn">Pogledaj</a>
-                                </div>
-                                <div class="product-card"
-                                data-category="spavaca">
-                                    <img src="images/spavaca.jpg"
-                                    width="200" loading="lazy"
-                                     alt="Spavaća soba">
-                                    <h3>Spavaća soba</h3>
-                                    <p>Pretvorite svoju spavaću sobu u oazu mira i udobnosti.</p>
-                                    <a href="sadrzaj.html#spavaca-soba"
-                                     class="btn">Pogledaj</a>
-                                    </div>
-                                    <div class="product-card"
-                                    data-category="kuhinja">
-                                        <img src="images/kuhinja.jpg"
-                                        width="200" loading="lazy"
-                                        alt="Kuhinja">
-                                        <h3>Kuhinja</h3>
-                                        <p>Funkcionalne i moderne kuhinje po mjeri.</p>
-                                        <a href="sadrzaj.html#kuhinja"
-                                         class="btn">Pogledaj</a>
-                                        </div>
-                                        <div class="product-card"
-                                        data-category="trpezarija">
-                                            <img src="images/trpezarija.jpg"
-                                            width="200" loading="lazy"
-                                             alt="Trpezarija">
-                                            <h3>Trpezarija</h3>
-                                            <p>Najbolji komfor za porodična okupljanja.</p>
-                                            <a href="sadrzaj.html#trpezarija" class="btn">Pogledaj</a>
-                                            </div>
-                                            <div class="product-card"
-                                            data-category="kupatilo">
-                                                <img src="images/kupatilo.jpg"
-                                                width="200" loading="lazy" alt="Kupatilo">
-                                                <h3>Kupatilo</h3>
-                                                <p>Udobno i funkcionalno za vaše svakodnevne potrebe.</p>
-                                                <a href="sadrzaj.html#kupatilo" class="btn">Pogledaj</a>
-                                            </div>
-                                            <div class="product-card"
-                                            data-category="radna">
-                                                <img src="images/radna-soba.jpg"
-                                                width="200" loading="lazy" alt="Radna soba">
-                                                <h3>Radna soba</h3>
-                                                <p>Modern namještaj za vašu kućnu kancelariju.</p>
-                                                <a href="sadrzaj.html#radna-soba" class="btn">Pogledaj</a>
-                                            
-
-                                        </div> 
-                                    </div>
-                                    </section>
-                                
-
-
-                                </div>
-                    <section id="dostava">
-                        <div class="container">
-                            <h2>Dostava</h2>
-                            <p>Brza dostava na vašu adresu u roku od 48h!</p>
-                        </div>
-                    </section>
-
-                
-<aside>
-    <!--kod za mapu uz pomoć gemini-->
-    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11377.686178242902!2d18.704051964692383!3d44.52700058718192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475952c4c706ba1d%3A0xe74f722c91d42f4c!2sSlavinovi%C4%87i%2C%2075000%20Tuzla!5e0!3m2!1shr!2sba!4v1778849792596!5m2!1shr!2sba"
-     width="100%"
-      height="300" 
-      style="border:0;"
-       allowfullscreen="" 
-       loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section id="dostava">
+            <div class="container">
+                <h2>Dostava</h2>
+                <p>Brza dostava na vašu adresu u roku od 48h!</p>
+            </div>
+        </section>            
+        
+        <aside>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11377.686178242902!2d18.704051964692383!3d44.52700058718192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475952c4c706ba1d%3A0xe74f722c91d42f4c!2sSlavinovi%C4%87i%2C%2075000%20Tuzla!5e0!3m2!1shr!2sba!4v1778849792596!5m2!1shr!2sba" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </aside>
            
-         </main>
+    </main>
             
-            </main>
-            <footer>
-                <p>&copy; 2026 HomeStyle
-                    Namještaj | Sva prava zadržana.</p>
-                    <p>Članovi tima: Kanita Hrvić, Kenan Ahmić, Kenan Ibeljić</p> 
-                    </footer>
-                    <script src="JS/tptpskripte.js"></script>
-            </body>
-            </html>
-
-
-
-                    <script src="JS/tptpskripte.js"></script>
+    <footer>
+        <p>© 2026 HomeStyle Namještaj | Sva prava zadržana.</p>
+        <p>Članovi tima: Kanita Hrvić, Kenan Ahmić, Kenan Ibeljić</p> 
+    </footer>
+    <script src="JS/tptpskripte.js"></script>
     </body>
 </html>
-
