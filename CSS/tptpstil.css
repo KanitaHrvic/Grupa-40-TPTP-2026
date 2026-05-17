@@ -180,7 +180,7 @@ th:last-child{
 }
 /*CSS kod za kontakt formu je dopunjen preporukom Claude AI*/
 
-
+/*======================================================================================================*/
 *{
     margin: 0;
     padding: 0;
@@ -196,7 +196,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- HEADER (Gradijent & Grid stil) --- */
+/* --- HEADER ------ */
 header#top {
     width: 100%;
     background: linear-gradient(135deg, #d2b48c 0%, #fdfdfd 100%);
@@ -227,7 +227,7 @@ header .container {
     color: #8d6e63;
 }
 
-/* Navigacijski linkovi i Hover efekt */
+/* Navigacijski linkovi */
 .nav-links {
     list-style: none;
     display: flex;    
@@ -246,7 +246,7 @@ header .container {
 }
 
 .nav-links a:hover {
-    color: #d2b48c; /* Promjena boje pri prelasku */
+    color: #d2b48c; 
     background-color: rgba(93, 64, 55, 0.1);
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -545,10 +545,8 @@ section[id] {
 }
 
 /*Tabela*/
-/* --- STIL ZA SEKCIJU TEHNIČKI PODACI --- */
 #tehnicki-podaci {
     padding: 60px 0;
-    /* Rješava problem skrivanja naslova ispod headera nakon klika na link */
     scroll-margin-top: 100px; 
 }
 
@@ -572,11 +570,11 @@ section[id] {
 }
 .tptp-tabela {
     width: 100%;
-    border-collapse: collapse; /* Spaja rubove ćelija u jednu liniju */
+    border-collapse: collapse;
     background-color: #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     border-radius: 8px;
-    overflow: hidden; /* Da rubovi tabele ostanu zaobljeni */
+    overflow: hidden; 
     margin-bottom: 40px;
 }
 
@@ -588,15 +586,12 @@ section[id] {
     background: #f4f1ee;
     border-bottom: 2px solid #d2b48c;
 }
-
-/* --- ZAGLAVLJE TABELE (PRVI RED) --- */
 .tptp-tabela thead {
-    background-color: #5d4037; /* Tamno smeđa pozadina */
+    background-color: #5d4037; 
     color: #000;
 }
-
 .tptp-tabela th {
-    color: #000 !important; /* BIJELA BOJA TEKSTA - ključno da se vidi */
+    color: #000 !important;
     background-color: #fdfbf7;
     padding: 15px;
     text-align: left;
@@ -605,16 +600,12 @@ section[id] {
     letter-spacing: 1px;
     border: 1px solid rgba(255,255,255,0.1);
 }
-
-/* --- TIJELO TABELE --- */
 .tptp-tabela td {
     padding: 12px 15px;
     border: 1px solid #eee;
     color: #444;
     font-size: 0.95rem;
 }
-
-/* Isticanje naziva soba (onih sa rowspan="4") */
 .tptp-tabela td[rowspan] {
     background-color: #fdfbf7;
     color: #5d4037;
@@ -623,13 +614,10 @@ section[id] {
     font-size: 1rem;
     border-right: 2px solid #d2b48c;
 }
-
-/* Zebra stil - svaki drugi red u drugoj boji radi lakšeg čitanja */
 .tptp-tabela tbody tr:nth-child(even) {
     background-color: #fafafa;
 }
 
-/* Hover efekt na redove */
 .tptp-tabela tbody tr:hover {
     background-color: #f4f1ee;
     transition: background 0.3s ease;
@@ -662,18 +650,18 @@ section[id] {
 }
 @media (max-width: 768px) {
     .glavna {
-        flex-direction: column; /* Prebacuje sidebar iznad ili ispod sadržaja */
+        flex-direction: column; 
         padding: 20px;
     }
     #bookmark-nav {
-        flex: none; /* Ukida fiksnu širinu od 240px */
-        width: 100%; /* Zauzima cijelu širinu na mobitelu */
-        position: static; /* Ukida ljepljivost (sticky) jer na mobitelu zauzima previše prostora */
+        flex: none; 
+        width: 100%; 
+        position: static; 
         margin-left: 0;
     }
     #bookmark-nav ul {
-        flex-direction: row; /* Stavlja linkove u red na mobitelu */
-        flex-wrap: wrap; /* Dozvoljava prelazak u novi red */
+        flex-direction: row; 
+        flex-wrap: wrap; 
         justify-content: center;
     }
 }
