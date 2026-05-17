@@ -121,35 +121,53 @@ korpa.forEach(function(proizvod){
 });
 document.getElementById('ukupno').textContent = ukupno.toFixed(2) + ' KM';
 };
+if(document.getElementById('korpa-tijelo')){
 prikaziKorpu();
+}
 function ukloniIzKorpe (index){
     let korpa = JSON.parse(localStorage.getItem('korpa'));
     korpa.splice(index, 1);
     localStorage.setItem('korpa', JSON.stringify(korpa));
     prikaziKorpu();
 }
+const narudzbaDugme = document.getElementById('posalji-narudzbu');
+if(narudzbaDugme){
+    narudzbaDugme.addEventListener('click', function(){
+        const korpa = localStorage.getItem('korpa');
+        if(korpa === null || JSON.parse(korpa).length === 0){
+            alert('Korpa je prazna!');
+            return;
+        }
+        alert('Vaša narudžba je poslana. Hvala na kupovini!');
+        localStorage.removeItem ('korpa');
+        prikaziKorpu();
+    });
+}
 
 /*
 /*======================STRANICA INDEX==================*/
 
  
-if (localStorage.getItem("tamna-tema") === "aktivno") {
-    document.body.style.backgroundColor = "#2d3748";
-    document.body.style.color = "#ffffff";
-
-
 const dugmeMjesec = document.getElementById("theme-toggle");
         if
         (localStorage.getItem("tamna-tema") === "aktivno") {
             document.body.classList.add('tamna-tema');
 
-        } else {
-            document.body.style.backgroundColor = "#2d3748";
-            document.body.style.color = "#ffffff";
-            localStorage.setItem("tamna-tema", "aktivno");
+        } 
+        
+        if (dugmeMjesec){
+            dugmeMjesec.addEventListener('click', function(){
+                document.body.classList.toggle('tamna-tema');
+
+                if(document.body.classList.contains('tamna-tema')){
+                    localStorage.setItem('tamna-tema', 'aktivno')
+                }else{
+                    localStorage.setItem('tamna-tema', 'ugaseno');
+                }
+            })
         }
-    })
-}
+    
+    
 document.querySelectorAll(".filter-btn").forEach(button => {
     button.addEventListener("click", function(e) {
         e.preventDefault();
