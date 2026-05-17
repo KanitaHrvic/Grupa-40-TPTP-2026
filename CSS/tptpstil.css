@@ -806,7 +806,7 @@ h2 {
     translateY(-15px);}
     to { opacity: 1; transform:
     translateY(0);}
-
+    }
 .vrh-link:hover {
     background-color: #8d6e63; /* Svjetlija smeđa na hover */
     transform: scale(1.1);     /* Malo se poveća kad pređeš mišem */
@@ -824,7 +824,7 @@ h2::after {
     height: 3px;
     background: var(--zlatna);
     margin: 10px auto;
-
+}
 /* Theme Toggle Button */
 #theme-toggle {
     background: none;
@@ -851,7 +851,6 @@ h2::after {
 }
 .kategorije-meni-strana ul li {
     margin-bottom: 12px;
-
 }
 .filter-btn {
     background-color: #f4f4f4;
@@ -865,20 +864,16 @@ h2::after {
     text-align: left;
     width: 150px;
     transition: all 0.3s ease;
-    
 }
 .filter-btn:hover {
     background-color: #e0e0e0;
     border-color: var(--zlatna);
-
-
 }
 .filter-btn.active {
     background-color: var(--zlatna);
     color: white;
     border: 1px solid var(--zlatna);
     font-weight: bold;
-
 }
 .main-layout {
     display: flex;
@@ -899,12 +894,12 @@ h2::after {
     grid-template-columns: 
     repeat(3, 1fr);
     gap: 25px;
+}
 .kategorije-meni-strana {
     flex:auto0
     0
     20px !important;
     min-width: 200px !important;
-
 }
 .grid-conteiner {
     flex: 1 !important;
