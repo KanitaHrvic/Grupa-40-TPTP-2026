@@ -1,6 +1,7 @@
 //---------------------------------vvvv SKRIPTA ZA KONTAKT FORMU vvv --------------------------------------------------------
 const forma = document.getElementById('kontakt-forma');
-forma.addEventListener('submit', function(event){
+if(forma){
+    forma.addEventListener('submit', function (event){
 event.preventDefault();
 let jeIspravno = true;
 const ime = document.getElementById('Ime');
@@ -60,6 +61,7 @@ if(jeIspravno){
     forma.reset(); 
 }
 })
+    
 document.getElementById('reset-dugme').addEventListener('click', function(){
     const uspjesna = document.getElementById('uspjesna-poruka');
     uspjesna.textContent = '';
@@ -72,6 +74,7 @@ polje.parentElement.classList.add('polje-greska');
 function ukloniGresku (polje, span){
     span.textContent = '';
     polje.parentElement.classList.remove('polje-greska');
+}
 }
 //------------------------------------------^^^ SKRIPTA ZA KONTAKT FORMU ^^^---------------------------------------------
 //------------------  vvv SKRIPTA ZA KORPU vvv  -------------------------------------
@@ -135,16 +138,10 @@ if (localStorage.getItem("tamna-tema") === "aktivno") {
     document.body.style.color = "#ffffff";
 
 
-}
 const dugmeMjesec = document.getElementById("theme-toggle");
-if (dugmeMjesec) {
-    dugmeMjesec.addEventListener("click", () => 
-    { 
         if
         (localStorage.getItem("tamna-tema") === "aktivno") {
-            document.body.style.backgroundColor = "#ffffff";
-            document.body.style.color = "#000000";
-            localStorage.setItem("tamna.tema", "ugaseno");
+            document.body.classList.add('tamna-tema');
 
         } else {
             document.body.style.backgroundColor = "#2d3748";
