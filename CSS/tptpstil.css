@@ -655,13 +655,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-.grid-container {
-    display: grid;
-    grid-template-columns:
-    repeat(3, 1fr);
-    gap: 30px;
-    padding: 20px;
-}
+
 .product-card {
     background: #fdfdfd;
     padding: 20px;
@@ -718,12 +712,26 @@ h2 {
         grid-template-columns:repeat(2, 1fr);
         }
     }
-@media (max-width: 600px){
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap:20px;
+@media (max-width: 600px) {
+    .main-layout {
+        flex-direction: column;
+        gap: 20px;
     }
 }
+.kategorije-meni-strana {
+    width: 100%;
+
+}
+.filter-btn {
+    width: 100%;
+    text-align: center;
+
+}
+.grid-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
 @keyframes pojavljivanje {
     from { opacity: 0; transform:
     translateY(-15px);}
@@ -731,10 +739,8 @@ h2 {
     translateY(0);}
 
 }
-h1, .hero-content
-h1, .title, .product-card h3 {
-    animation: pojavljivanje 1.5s
-    ease-out forwards;
+h1, .hero-content h1, .title, .product-card h3 {
+    animation: pojavljivanje 1.5s ease-out forwards;
 }
 h1, .hero-content h1, .title {
     animation-delay: 0.3s;
@@ -793,47 +799,23 @@ h2::after {
     font-weight: bold;
 
 }
-section.products {
+.main-layout {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
     gap: 40px;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-section.products h2 {
+    margin: 30px auto;
+    padding: 0 20px;
+    align-items: flex-start;
     width: 100%;
-    margin-bottom: 30px;
-
 }
-section.products {
-    display: flex;
-    flex-wrap: wrap !important;
-    align-items: flex-start !important;
-    gap: 40px !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 40px 20px !important;
+.products {
+    min-width: 240px;
+    flex-shrink: 0;
 }
-section.products h2 {
-width: 100% !important;
-text-align: center !important;
-margin-bottom: 40px !important;
-display: block !important;
-}
-.kategorije-meni-strana {
-    flex:auto0
-    0
-    20px !important;
-    min-width: 200px !important;
-
-}
-.grid-conteiner {
-    flex: 1 !important;
-    display: grid !important;
-    grid-template-columns:
-    repeat(3, 1fr) !important;
-    gap: 25px !important;
-    margin: 0 !important;
+.grid-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 
+    repeat(3, 1fr);
+    gap: 25px;
 }

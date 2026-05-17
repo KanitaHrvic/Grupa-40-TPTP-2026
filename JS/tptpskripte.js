@@ -128,7 +128,7 @@ function ukloniIzKorpe (index){
 
 /*
 /*======================STRANICA INDEX==================*/
-
+alert("JS radi!");
  
 if (localStorage.getItem("tamna-tema") === "aktivno") {
     document.body.style.backgroundColor = "#2d3748";
