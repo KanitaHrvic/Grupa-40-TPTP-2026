@@ -44,13 +44,33 @@ td img{
 .Ukupna-cijena table{
     border-top: 3px solid #D4C4B0;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
+}
+.Ukupna-cijena td:last-child{
+    text-align: right;
 }
 td :last-child{
     text-align: right;
 }
 th:last-child{
     text-align: right;
+}
+.narudzba-dugme{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+.narudzba-dugme button{
+    background-color: #C8732A;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.narudzba-dugme button:hover{
+    background-color: #A85E1F;
 }
 /*--------------------------KONTAKT FORMA---------------------------------*/
 .hero{
@@ -160,7 +180,7 @@ th:last-child{
 }
 /*CSS kod za kontakt formu je dopunjen preporukom Claude AI*/
 
-
+/*======================================================================================================*/
 *{
     margin: 0;
     padding: 0;
@@ -175,8 +195,8 @@ body {
     color: #333;
     line-height: 1.6;
 }
-/*======================================================================================*/
-/* --- HEADER (zaglavlje za sve stranice) --- */
+
+/* --- HEADER ------ */
 header#top {
     width: 100%;
     background: linear-gradient(135deg, #d2b48c 0%, #fdfdfd 100%);
@@ -186,6 +206,7 @@ header#top {
     top: 0;
     z-index: 1000;
 }
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -195,15 +216,18 @@ header .container {
     padding: 0 20px;
     flex-wrap: wrap;
 }
+
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #5d4037;
 }
+
 .logo span {
     color: #8d6e63;
 }
-/* Navigacijski linkovi*/
+
+/* Navigacijski linkovi */
 .nav-links {
     list-style: none;
     display: flex;    
@@ -212,12 +236,18 @@ header .container {
     margin: 0;
     flex-wrap: wrap;
 }
-/* Osnovni stil za linkove */
-.nav-links li a {
+
+.nav-links a {
     text-decoration: none;
     color: #4a3728;          
     font-weight: 500;
-    padding: 8px 12px;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    color: #d2b48c; 
+    background-color: rgba(93, 64, 55, 0.1);
     border-radius: 5px;
     transition: all 0.3s ease;
     position: relative;      
@@ -240,12 +270,14 @@ header .container {
     background-color: #b08d57;
     border-radius: 2px;
 }
+
 /* GitHub Uputa - Uokvirena */
 .nav-actions {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .nav-actions a[href*="https://github.com/KanitaHrvic/Grupa-40-TPTP-2026"] {
     text-decoration: none;
     color: #5d4037;
@@ -255,6 +287,7 @@ header .container {
     border-radius: 8px;
     transition: 0.3s;
 }
+
 .nav-actions a[href*="https://github.com/KanitaHrvic/Grupa-40-TPTP-2026"]:hover {
     background-color: #5d4037;
     color: #fff;
@@ -370,20 +403,22 @@ html {
     z-index: 10;
     margin-left: 10px;        
 }
+
 #bookmark-nav ul {
     display: flex;
     flex-direction: column;  
     list-style: none;
-    padding: 0;
-    margin: 15px 0 0 0;
-    gap: 12px;                
+    gap: 15px;
+    margin-top: 10px;
 }
+
 #bookmark-nav a {
-    display: block;
     text-decoration: none;
     color: #8d6e63;
-    transition: 0.2s ease;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
 }
+
 #bookmark-nav a:hover {
     padding-left: 5px;        
 }
@@ -437,13 +472,15 @@ html {
 .katalog-okvir:hover {
   transform: translateY(-5px);
 }
-/*GALERIJA (Istaknuti artikli)*/
+
+/* --- GALERIJA (Istaknuti artikli) --- */
 .galerija {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin: 20px 0;
 }
+
 .galerija figure {
     background: #fff;
     padding: 10px;
@@ -451,21 +488,25 @@ html {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     text-align: center;
 }
+
 .galerija img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
 }
+
 .galerija figcaption {
     margin-top: 10px;
     font-weight: 500;
 }
-/* KARTICE PROIZVODA (Dnevna soba, Spavaća itd.) */
+
+/* --- KARTICE PROIZVODA (Dnevna soba, Spavaća itd.) --- */
 section[id] {
     padding: 40px 0;
     border-bottom: 1px solid #eee;
 }
+
 .kartica {
     display: inline-block;
     width: 100%;
@@ -477,15 +518,18 @@ section[id] {
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     vertical-align: top;
 }
+
 .kartica img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
+
 .kartica .info {
     padding: 15px;
     text-align: center;
 }
+
 .kartica button {
     background-color: #5d4037;
     color: white;
@@ -495,20 +539,28 @@ section[id] {
     cursor: pointer;
     margin-top: 10px;
 }
+
 .kartica button:hover {
     background-color: #8d6e63;
 }
-/* TABELA */
-#tehnicki-podaci header {
-    text-align: center;
-    margin-bottom: 40px;
+
+/*Tabela*/
+#tehnicki-podaci {
+    padding: 60px 0;
+    scroll-margin-top: 100px; 
 }
-#tehnicki-podaci h3 {
-    color: var(--primarna-smedja);
-    font-size: 2rem;
+
+#tehnicki-podaci header h3 {
+    color: #5d4037;
+    font-size: 1.8rem;
     margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-align: center;
+}
+
+#tehnicki-podaci header p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
 }
 /* Dizajn Tabele */
 .tabela-kontejner {
@@ -519,43 +571,56 @@ section[id] {
 .tptp-tabela {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--bijela);
-    border-radius: 12px;
-    overflow: hidden; /* Da se zaobljeni uglovi vide */
-    box-shadow: 0 10px 30px var(--sjenka);
-    margin-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden; 
+    margin-bottom: 40px;
 }
+
 .tptp-tabela caption {
     padding: 15px;
-    font-style: italic;
-    color: #8a7a6b;
-    caption-side: bottom;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #5d4037;
+    background: #f4f1ee;
+    border-bottom: 2px solid #d2b48c;
 }
-.tptp-tabela thead tr {
-    background-color: var(--primarna-smedja);
-    color: var(--bijela);
-    text-align: left;
+.tptp-tabela thead {
+    background-color: #5d4037; 
+    color: #000;
 }
 .tptp-tabela th {
-    padding: 18px 15px;
-    font-weight: 600;
-    font-size: 14px;
+    color: #000 !important;
+    background-color: #fdfbf7;
+    padding: 15px;
+    text-align: left;
     text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 .tptp-tabela td {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    color: #444;
+    font-size: 0.95rem;
 }
 .tptp-tabela td[rowspan] {
-    background-color: var(--bez-pozadina);
-    border-right: 2px solid var(--svijetlo-smedja);
+    background-color: #fdfbf7;
+    color: #5d4037;
     vertical-align: middle;
     text-align: center;
-    color: var(--primarna-smedja);
+    font-size: 1rem;
+    border-right: 2px solid #d2b48c;
 }
+.tptp-tabela tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
 .tptp-tabela tbody tr:hover {
-    background-color: #fcf9f5;
-    transition: background 0.2s ease;
+    background-color: #f4f1ee;
+    transition: background 0.3s ease;
 }
 /* POVRATAK NA POCETAK LINK */
 .vrh-link {
@@ -585,22 +650,23 @@ section[id] {
 }
 @media (max-width: 768px) {
     .glavna {
-        flex-direction: column; /* Prebacuje sidebar iznad ili ispod sadržaja */
+        flex-direction: column; 
         padding: 20px;
     }
     #bookmark-nav {
-        flex: none; /* Ukida fiksnu širinu od 240px */
-        width: 100%; /* Zauzima cijelu širinu na mobitelu */
-        position: static; /* Ukida ljepljivost (sticky) jer na mobitelu zauzima previše prostora */
+        flex: none; 
+        width: 100%; 
+        position: static; 
         margin-left: 0;
     }
     #bookmark-nav ul {
-        flex-direction: row; /* Stavlja linkove u red na mobitelu */
-        flex-wrap: wrap; /* Dozvoljava prelazak u novi red */
+        flex-direction: row; 
+        flex-wrap: wrap; 
         justify-content: center;
     }
 }
-/* --- FOOTER (za sve stranice) --- */
+
+/* --- FOOTER & LINKOVI --- */
 footer {
     width: 100%;
     text-align: center;
@@ -691,14 +757,17 @@ h2 {
     font-style: italic;
     padding: 0 10px;
 }
-.product-card a {
-    display: inline-block;
-    background-color: var(--plava);
-    color: var(--bijela) !important;
-    padding: 10px 20px;
+
+/* --- FIKSIRANO DUGME ZA POVRATAK NA VRH --- */
+.vrh-link {
+    position: fixed;         /* Ovo omogućava da te dugme prati */
+    bottom: 20px;           /* Udaljenost od dna ekrana */
+    right: 20px;            /* Udaljenost od desne ivice */
+    background-color: #5d4037; /* Tvoja osnovna smeđa boja */
+    color: white !important; /* Boja teksta/strelice */
+    padding: 10px 15px;
+    border-radius: 50px;    /* Zaobljeni rubovi (pilula izgled) */
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
     font-weight: bold;
     transition: transform 0.3s ease, background-color 0.3 ease;
 }
@@ -738,6 +807,9 @@ h2 {
     to { opacity: 1; transform:
     translateY(0);}
 
+.vrh-link:hover {
+    background-color: #8d6e63; /* Svjetlija smeđa na hover */
+    transform: scale(1.1);     /* Malo se poveća kad pređeš mišem */
 }
 h1, .hero-content h1, .title, .product-card h3 {
     animation: pojavljivanje 1.5s ease-out forwards;
@@ -752,6 +824,15 @@ h2::after {
     height: 3px;
     background: var(--zlatna);
     margin: 10px auto;
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: 1px solid #5d4037;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 50%;
 }
 .kategorije-meni-strana h3 {
     font-size: 18px;
@@ -818,4 +899,23 @@ h2::after {
     grid-template-columns: 
     repeat(3, 1fr);
     gap: 25px;
+.kategorije-meni-strana {
+    flex:auto0
+    0
+    20px !important;
+    min-width: 200px !important;
+
+}
+.grid-conteiner {
+    flex: 1 !important;
+    display: grid !important;
+    grid-template-columns:
+    repeat(3, 1fr) !important;
+    gap: 25px !important;
+    margin: 0 !important;
+}
+/*Tamna tema*/
+body.tamna-tema{
+    background-color: #2d3748 !important;
+    color: #ffffff !important;
 }
