@@ -148,8 +148,7 @@ const dugmeMjesec = document.getElementById("theme-toggle");
             document.body.style.color = "#ffffff";
             localStorage.setItem("tamna-tema", "aktivno");
         }
-    })
-}
+    }
 document.querySelectorAll(".filter-btn").forEach(button => {
     button.addEventListener("click", function(e) {
         e.preventDefault();
